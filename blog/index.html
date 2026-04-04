@@ -6,7 +6,7 @@
     <title>Blog | Muhammad Ali Nazir</title>
     <meta
       name="description"
-      content="Dedicated blog section for weekly posts by Muhammad Ali Nazir on academic change, resilience, and computer engineering growth."
+      content="A journal-style blog archive by Muhammad Ali Nazir where readers can browse a list of posts and open any article to read in full."
     />
     <meta name="theme-color" content="#102f4d" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,8 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Sora:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/styles.css?v=20260404-10" />
-    <script src="/main.js?v=20260404-9" defer></script>
+    <link rel="stylesheet" href="/styles.css?v=20260404-11" />
+    <script src="/main.js?v=20260404-11" defer></script>
   </head>
   <body class="blog-page" data-base="." data-nav-current="blog">
     <div class="site-shell">
@@ -54,64 +54,54 @@
         <section class="page-hero page-hero-simple" data-reveal>
           <div class="page-hero-copy">
             <p class="eyebrow">Blog</p>
-            <h1>Weekly reflections on growth, discipline, and direction.</h1>
+            <h1>A reading list of personal reflections, study struggles, and growth.</h1>
             <p>
-              This section is dedicated to my weekly posts. While the home page
-              remains a static introduction, all reflections and articles are
-              collected here in one place.
+              This section displays my blogs as a readable journal archive. A
+              reader can browse the list below, open any title, and read the
+              full article on its own page.
             </p>
           </div>
         </section>
 
-        <section class="featured-section">
-          <div class="section-heading" data-reveal>
-            <p class="eyebrow">Latest Post</p>
-            <h2>From MDCAT Dreams to Engineering Reality</h2>
-          </div>
+        <section class="blog-overview-band">
+          <article class="blog-overview-card" data-reveal>
+            <span class="card-kicker">Reader View</span>
+            <h2>Pick a post from the list and open it to read in full.</h2>
+            <p>
+              Each entry includes its own image, summary, themes, and a direct
+              reading link so the archive feels organized and easy to scan.
+            </p>
+          </article>
 
-          <article class="feature-story" data-reveal>
-            <div class="feature-story-media">
-              <img
-                src="/assets/illustrations/journal-cover.svg"
-                alt="Cover image for the first weekly reflection."
-              />
-            </div>
-
-            <div class="feature-story-body">
-              <div class="post-card-meta">
-                <span>Week 01</span>
-                <span>April 4, 2026</span>
-                <span>8 min read</span>
+          <article class="blog-stats-card" data-reveal>
+            <span class="card-kicker">Archive Stats</span>
+            <div class="metric-stack">
+              <div class="metric-line">
+                <strong data-post-count></strong>
+                <span>Published articles</span>
               </div>
-              <h3>From MDCAT Dreams to Engineering Reality</h3>
-              <p>
-                The opening article reflects on preparation, disappointment,
-                acceptance, and the decision to pursue computer engineering with
-                seriousness instead of hesitation.
-              </p>
-
-              <div class="story-points">
-                <div class="story-point">Medical ambition shaped by pressure and expectation</div>
-                <div class="story-point">A narrow miss that forced a reset</div>
-                <div class="story-point">Engineering chosen as a serious path forward</div>
-              </div>
-
-              <div class="hero-actions">
-                <a class="button button-primary" href="/posts/mdcat-dreams-to-engineering-reality/">
-                  Read Post
-                </a>
+              <div class="metric-line">
+                <strong data-latest-post-date></strong>
+                <span>Latest publication</span>
               </div>
             </div>
+            <p>
+              New topics on study life, programming, and engineering direction
+              can be added here as the archive grows.
+            </p>
           </article>
         </section>
 
         <section class="archive-grid-section">
           <div class="section-heading compact" data-reveal>
-            <p class="eyebrow">All Posts</p>
-            <h2>Published blog posts.</h2>
+            <p class="eyebrow">Blog List</p>
+            <h2>Browse the journal archive.</h2>
+            <p>
+              Select any blog below to open the full reading page.
+            </p>
           </div>
 
-          <div class="post-grid archive-grid" data-post-list data-reveal></div>
+          <div class="blog-directory" data-post-list data-post-layout="list"></div>
         </section>
       </main>
 
