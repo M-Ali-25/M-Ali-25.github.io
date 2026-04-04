@@ -1,25 +1,27 @@
 const posts = [
   {
-    title: "Walking into Programming Fundamentals with Zero Background",
-    href: "/posts/walking-into-programming-fundamentals-with-zero-background/",
-    label: "Week 03 Reflection",
-    dateLabel: "April 4, 2026",
-    readTime: "7 min read",
+    number: 1,
+    title: "From MDCAT Dreams to Engineering Reality",
+    href: "/posts/mdcat-dreams-to-engineering-reality/",
+    label: "Blog 1",
+    dateLabel: "March 21, 2026",
+    readTime: "8 min read",
     excerpt:
-      "A reflection on entering Programming Fundamentals without prior coding experience and learning Python, logic, and core concepts from scratch.",
+      "A reflective post on shifting from a medical ambition to a serious, intentional path in computer engineering after a narrow MDCAT setback.",
     highlights: [
-      "Starting Python without any prior coding experience",
-      "Facing confusion around variables, loops, and logic",
-      "Learning the basics under pressure while others were already ahead",
+      "Medical ambition shaped by pressure and expectation",
+      "A narrow miss that forced a reset",
+      "Engineering chosen as a serious path forward",
     ],
-    tags: ["Programming Fundamentals", "Python", "Learning Journey"],
-    cover: "/assets/illustrations/programming-zero-background.svg",
-    coverAlt: "Illustration of a student learning programming fundamentals from scratch with Python concepts on screen.",
+    tags: ["Academic Reflection", "Resilience", "Engineering"],
+    cover: "/assets/illustrations/journal-cover.svg",
+    coverAlt: "Illustration showing a student shifting from medical goals toward an engineering future.",
   },
   {
+    number: 2,
     title: "A Late Start: When First Semester Was Already Half Gone",
     href: "/posts/a-late-start-when-first-semester-was-already-half-gone/",
-    label: "Week 02 Reflection",
+    label: "Blog 2",
     dateLabel: "March 28, 2026",
     readTime: "6 min read",
     excerpt:
@@ -34,21 +36,58 @@ const posts = [
     coverAlt: "Illustration of a delayed semester start with a half-complete timeline, study notes, and a clock.",
   },
   {
-    title: "From MDCAT Dreams to Engineering Reality",
-    href: "/posts/mdcat-dreams-to-engineering-reality/",
-    label: "Week 01 Reflection",
-    dateLabel: "March 21, 2026",
-    readTime: "8 min read",
+    number: 3,
+    title: "Walking into Programming Fundamentals with Zero Background",
+    href: "/posts/walking-into-programming-fundamentals-with-zero-background/",
+    label: "Blog 3",
+    dateLabel: "April 4, 2026",
+    readTime: "7 min read",
     excerpt:
-      "A reflective post on shifting from a medical ambition to a serious, intentional path in computer engineering after a narrow MDCAT setback.",
+      "A reflection on entering Programming Fundamentals without prior coding experience and learning Python, logic, and core concepts from scratch.",
     highlights: [
-      "Medical ambition shaped by pressure and expectation",
-      "A narrow miss that forced a reset",
-      "Engineering chosen as a serious path forward",
+      "Starting Python without any prior coding experience",
+      "Facing confusion around variables, loops, and logic",
+      "Learning the basics under pressure while others were already ahead",
     ],
-    tags: ["Academic Reflection", "Resilience", "Engineering"],
-    cover: "/assets/illustrations/journal-cover.svg",
-    coverAlt: "Illustration showing a student shifting from medical goals toward an engineering future.",
+    tags: ["Programming Fundamentals", "Python", "Learning Journey"],
+    cover: "/assets/illustrations/programming-zero-background.svg",
+    coverAlt: "Illustration of a student learning programming fundamentals from scratch with Python concepts on screen.",
+  },
+  {
+    number: 4,
+    title: "Learning Under Pressure: Nights of Self-Study",
+    href: "/posts/learning-under-pressure-nights-of-self-study/",
+    label: "Blog 4",
+    dateLabel: "April 11, 2026",
+    readTime: "6 min read",
+    excerpt:
+      "A reflection on late-night self-study, covering missed PF concepts, strengthening logic through practice, and managing stress before labs and quizzes.",
+    highlights: [
+      "Covering missed PF concepts like loops and functions",
+      "Practicing small Python programs to strengthen logic",
+      "Managing stress while preparing for lab tasks and quizzes",
+    ],
+    tags: ["Self Study", "Programming Practice", "Discipline"],
+    cover: "/assets/illustrations/self-study-nights.svg",
+    coverAlt: "Illustration of late-night study, Python practice, and preparation under pressure.",
+  },
+  {
+    number: 5,
+    title: "My First Achievement: Machine Learning Project",
+    href: "/posts/my-first-achievement-machine-learning-project/",
+    label: "Blog 5",
+    dateLabel: "April 18, 2026",
+    readTime: "7 min read",
+    excerpt:
+      "A reflection on building a first machine learning project, using Python for used car price prediction, and seeing how programming connects to real-world problems.",
+    highlights: [
+      "Building a project using machine learning",
+      "Applying Python concepts for used car price prediction",
+      "Understanding how programming connects to real-world problems",
+    ],
+    tags: ["Machine Learning", "Python Project", "Achievement"],
+    cover: "/assets/illustrations/machine-learning-project.svg",
+    coverAlt: "Illustration of a machine learning dashboard with charts, code, and a car price prediction theme.",
   },
 ];
 
@@ -71,6 +110,21 @@ function renderPosts() {
         const highlights = (post.highlights || [])
           .map((item) => `<li>${item}</li>`)
           .join("");
+
+        if (layout === "minimal") {
+          return `
+          <li class="blog-minimal-item" data-reveal>
+            <a class="blog-minimal-link" href="${resolvePath(post.href)}" aria-label="Read ${post.title}">
+              <span class="blog-minimal-number">Blog ${post.number}</span>
+              <span class="blog-minimal-title">${post.title}</span>
+              <span class="blog-minimal-meta">
+                <span>${post.dateLabel}</span>
+                <span>${post.readTime}</span>
+              </span>
+            </a>
+          </li>
+        `;
+        }
 
         if (layout === "list") {
           return `
@@ -130,8 +184,8 @@ function renderPosts() {
   }
 
   const latestPostDate = document.querySelector("[data-latest-post-date]");
-  if (latestPostDate && posts[0]) {
-    latestPostDate.textContent = posts[0].dateLabel;
+  if (latestPostDate && posts[posts.length - 1]) {
+    latestPostDate.textContent = posts[posts.length - 1].dateLabel;
   }
 }
 

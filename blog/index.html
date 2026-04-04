@@ -6,7 +6,7 @@
     <title>Blog | Muhammad Ali Nazir</title>
     <meta
       name="description"
-      content="A journal-style blog archive by Muhammad Ali Nazir where readers can browse a list of posts and open any article to read in full."
+      content="A minimal blog list by Muhammad Ali Nazir, showing numbered posts in ascending order that open into full reading pages."
     />
     <meta name="theme-color" content="#102f4d" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,8 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Sora:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/styles.css?v=20260404-11" />
-    <script src="/main.js?v=20260404-11" defer></script>
+    <link rel="stylesheet" href="/styles.css?v=20260404-12" />
+    <script src="/main.js?v=20260404-12" defer></script>
   </head>
   <body class="blog-page" data-base="." data-nav-current="blog">
     <div class="site-shell">
@@ -54,61 +54,23 @@
         <section class="page-hero page-hero-simple" data-reveal>
           <div class="page-hero-copy">
             <p class="eyebrow">Blog</p>
-            <h1>A reading list of personal reflections, study struggles, and growth.</h1>
+            <h1>A simple list of my blogs.</h1>
             <p>
-              This section displays my blogs as a readable journal archive. A
-              reader can browse the list below, open any title, and read the
-              full article on its own page.
+              The list below is arranged in ascending order. Click any blog to
+              open the full post and read the details there.
             </p>
           </div>
         </section>
 
-        <section class="blog-overview-band">
-          <article class="blog-overview-card" data-reveal>
-            <span class="card-kicker">Reader View</span>
-            <h2>Pick a post from the list and open it to read in full.</h2>
-            <p>
-              Each entry includes its own image, summary, themes, and a direct
-              reading link so the archive feels organized and easy to scan.
-            </p>
-          </article>
-
-          <article class="blog-stats-card" data-reveal>
-            <span class="card-kicker">Archive Stats</span>
-            <div class="metric-stack">
-              <div class="metric-line">
-                <strong data-post-count></strong>
-                <span>Published articles</span>
-              </div>
-              <div class="metric-line">
-                <strong data-latest-post-date></strong>
-                <span>Latest publication</span>
-              </div>
-            </div>
-            <p>
-              New topics on study life, programming, and engineering direction
-              can be added here as the archive grows.
-            </p>
-          </article>
-        </section>
-
-        <section class="archive-grid-section">
-          <div class="section-heading compact" data-reveal>
-            <p class="eyebrow">Blog List</p>
-            <h2>Browse the journal archive.</h2>
-            <p>
-              Select any blog below to open the full reading page.
-            </p>
-          </div>
-
-          <div class="blog-directory" data-post-list data-post-layout="list"></div>
+        <section class="blog-list-section" data-reveal>
+          <ol class="blog-minimal-list" data-post-list data-post-layout="minimal"></ol>
         </section>
       </main>
 
       <footer class="site-footer">
         <p>
-          <span data-current-year></span> Muhammad Ali Nazir. Weekly reflections
-          on growth, discipline, and engineering direction.
+          <span data-current-year></span> Muhammad Ali Nazir. Personal writing,
+          one blog at a time.
         </p>
       </footer>
     </div>

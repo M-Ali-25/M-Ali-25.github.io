@@ -845,11 +845,79 @@ ol {
 
 .blog-page .page-hero h1 {
   font-size: clamp(1.85rem, 3.2vw, 2.8rem);
-  max-width: 16ch;
+  max-width: 12ch;
 }
 
 .blog-page .section-heading h2 {
   font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+}
+
+.blog-page .page-hero-copy p:last-child {
+  max-width: 42rem;
+}
+
+.blog-list-section {
+  padding: 0.3rem 0 1.2rem;
+}
+
+.blog-minimal-list {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.blog-minimal-item {
+  list-style: none;
+}
+
+.blog-minimal-link {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.15rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(251, 253, 255, 0.96);
+  box-shadow: 0 16px 34px rgba(23, 59, 99, 0.08);
+  transition: transform var(--transition), box-shadow var(--transition),
+    border-color var(--transition), background var(--transition);
+}
+
+.blog-minimal-link:hover,
+.blog-minimal-link:focus-visible {
+  transform: translateY(-2px);
+  border-color: #bdd0e8;
+  background: #ffffff;
+  box-shadow: 0 22px 44px rgba(23, 59, 99, 0.12);
+}
+
+.blog-minimal-number {
+  color: var(--accent-deep);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.blog-minimal-title {
+  color: var(--text);
+  font-family: "Fraunces", serif;
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  line-height: 1.18;
+}
+
+.blog-minimal-meta {
+  display: grid;
+  justify-items: end;
+  gap: 0.22rem;
+  color: var(--muted);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .blog-overview-band {
@@ -1727,6 +1795,15 @@ body.js-enhanced [data-reveal].is-visible {
     grid-template-columns: 1fr;
   }
 
+  .blog-minimal-link {
+    grid-template-columns: 110px minmax(0, 1fr);
+  }
+
+  .blog-minimal-meta {
+    justify-items: start;
+    grid-column: 2;
+  }
+
   .blog-list-image {
     min-height: auto;
   }
@@ -1828,6 +1905,18 @@ body.js-enhanced [data-reveal].is-visible {
 
   .home-glance-grid {
     grid-template-columns: 1fr;
+  }
+
+  .blog-minimal-link {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+    padding: 1rem 1.05rem;
+  }
+
+  .blog-minimal-meta {
+    grid-column: auto;
+    justify-items: start;
+    white-space: normal;
   }
 
   .hero-copy h1,

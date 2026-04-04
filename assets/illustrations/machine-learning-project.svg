@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Machine learning project illustration</title>
+  <desc id="desc">An abstract illustration of a first machine learning project with charts, Python code, and a used car price prediction theme.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eef4fb" />
+      <stop offset="42%" stop-color="#f8f2e7" />
+      <stop offset="100%" stop-color="#dbe8f7" />
+    </linearGradient>
+    <linearGradient id="screen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15375b" />
+      <stop offset="100%" stop-color="#4b86c8" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#16375c" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)" />
+  <circle cx="1060" cy="138" r="132" fill="#f3d4a8" opacity="0.46" />
+  <circle cx="132" cy="670" r="168" fill="#bfd5ef" opacity="0.46" />
+
+  <g filter="url(#shadow)">
+    <rect x="96" y="138" width="680" height="454" rx="34" fill="#ffffff" />
+  </g>
+  <rect x="140" y="184" width="592" height="268" rx="28" fill="url(#screen)" />
+  <polyline points="190,386 272,330 350,352 426,272 500,286 582,228 658,238" fill="none" stroke="#f5d49f" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="190" cy="386" r="10" fill="#f5d49f" />
+  <circle cx="272" cy="330" r="10" fill="#f5d49f" />
+  <circle cx="350" cy="352" r="10" fill="#f5d49f" />
+  <circle cx="426" cy="272" r="10" fill="#f5d49f" />
+  <circle cx="500" cy="286" r="10" fill="#f5d49f" />
+  <circle cx="582" cy="228" r="10" fill="#f5d49f" />
+  <circle cx="658" cy="238" r="10" fill="#f5d49f" />
+  <rect x="178" y="224" width="116" height="18" rx="9" fill="#8cb6e0" />
+  <rect x="178" y="260" width="152" height="18" rx="9" fill="#ffffff" opacity="0.84" />
+  <rect x="178" y="296" width="134" height="18" rx="9" fill="#8cb6e0" />
+
+  <rect x="226" y="514" width="418" height="22" rx="11" fill="#d6e3f2" />
+  <rect x="296" y="550" width="278" height="18" rx="9" fill="#173b63" />
+
+  <g filter="url(#shadow)">
+    <rect x="818" y="150" width="292" height="210" rx="30" fill="#f9fbff" />
+  </g>
+  <text x="854" y="212" fill="#173b63" font-family="Fraunces, Georgia, serif" font-size="34" font-weight="700">ML Project</text>
+  <text x="854" y="254" fill="#5a697c" font-family="Sora, Arial, sans-serif" font-size="20">Python</text>
+  <text x="854" y="286" fill="#5a697c" font-family="Sora, Arial, sans-serif" font-size="20">Prediction</text>
+  <text x="854" y="318" fill="#5a697c" font-family="Sora, Arial, sans-serif" font-size="20">Used Car Prices</text>
+
+  <g filter="url(#shadow)">
+    <rect x="816" y="418" width="300" height="206" rx="32" fill="#173b63" />
+  </g>
+  <path d="M886 538 C922 480, 1008 470, 1058 520" fill="none" stroke="#8cb6e0" stroke-width="12" stroke-linecap="round" />
+  <circle cx="938" cy="560" r="36" fill="#f3d39f" />
+  <rect x="890" y="566" width="98" height="24" rx="12" fill="#173b63" />
+  <circle cx="1028" cy="560" r="36" fill="#f3d39f" />
+  <rect x="980" y="566" width="98" height="24" rx="12" fill="#173b63" />
+  <text x="852" y="474" fill="#ffffff" font-family="Sora, Arial, sans-serif" font-size="20">First real-world project idea</text>
+</svg>
