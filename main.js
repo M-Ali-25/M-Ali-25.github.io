@@ -1,17 +1,18 @@
 const posts = [
   {
     title: "From MDCAT Dreams to Engineering Reality",
-    href: "posts/mdcat-dreams-to-engineering-reality.html",
+    href: "/posts/mdcat-dreams-to-engineering-reality/",
     dateLabel: "April 4, 2026",
     readTime: "8 min read",
     excerpt:
       "A reflective post on shifting from a medical ambition to a serious, intentional path in computer engineering after a narrow MDCAT setback.",
     tags: ["Academic Reflection", "Resilience", "Engineering"],
-    cover: "assets/illustrations/journal-cover.svg",
+    cover: "/assets/illustrations/journal-cover.svg",
   },
 ];
 
 function resolvePath(path) {
+  if (path.startsWith("/")) return path;
   const base = document.body.dataset.base || ".";
   return base === "." ? path : `${base}/${path}`;
 }
