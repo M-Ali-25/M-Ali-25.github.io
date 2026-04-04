@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ali Nazir | Engineering Journal</title>
+    <title>Muhammad Ali Nazir | Home</title>
     <meta
       name="description"
-      content="A personal website documenting Ali Nazir's transition from MDCAT preparation to a serious computer engineering journey."
+      content="Personal homepage of Muhammad Ali Nazir, a computer engineering student and passionate learner."
     />
     <meta name="theme-color" content="#102f4d" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,13 +15,13 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Sora:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260404-2" />
-    <script src="main.js?v=20260404-2" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260404-3" />
+    <script src="main.js?v=20260404-3" defer></script>
   </head>
-  <body class="home-page" data-base=".">
+  <body class="home-page" data-base="." data-nav-current="home">
     <div class="site-shell">
       <header class="site-header">
-        <a class="brand" href="index.html" aria-label="Ali Nazir Home">
+        <a class="brand" href="index.html" aria-label="Muhammad Ali Nazir Home">
           <span class="brand-mark">
             <img src="assets/profile-avatar.jpg" alt="Portrait of Muhammad Ali Nazir" />
           </span>
@@ -43,232 +43,130 @@
         </button>
 
         <nav class="site-nav" data-nav-links>
-          <a href="#about">About</a>
-          <a href="#story">Journey</a>
-          <a href="blog.html">Blog</a>
-          <a href="#contact">Contact</a>
+          <a href="index.html" data-nav-key="home">Home</a>
+          <a href="about.html" data-nav-key="about">About</a>
+          <a href="journey.html" data-nav-key="journey">Journey</a>
+          <a href="blog.html" data-nav-key="blog">Blog</a>
+          <a href="contact.html" data-nav-key="contact">Contact</a>
         </nav>
 
-        <a class="header-link" href="posts/mdcat-dreams-to-engineering-reality.html">
-          Week 01
-        </a>
+        <a class="header-link" href="blog.html">Blog Archive</a>
       </header>
 
-      <main>
-        <section class="hero hero-home" data-reveal>
-          <div class="hero-copy">
-            <p class="eyebrow">Ali Nazir | Personal Website + Weekly Blog</p>
-            <h1>From a near medical admission to a deliberate engineering future.</h1>
+      <main class="page-main">
+        <section class="page-hero intro-hero" data-reveal>
+          <div class="page-hero-copy">
+            <p class="eyebrow">Home</p>
+            <h1>Muhammad Ali Nazir</h1>
             <p class="hero-text">
-              This website shares my journey, growth, and weekly reflections as
-              I continue learning and moving forward in computer engineering.
+              Computer engineering student at the University of Engineering and
+              Technology Lahore, Faisalabad Campus, and a passionate learner
+              focused on consistent growth.
+            </p>
+            <p class="hero-text">
+              This homepage is a simple introduction. My background, academic
+              journey, weekly blog, and contact details are now organized on
+              their own separate pages.
             </p>
 
             <div class="hero-actions">
-              <a class="button button-primary" href="posts/mdcat-dreams-to-engineering-reality.html">
-                Read Week 01
-              </a>
-              <a class="button button-secondary" href="blog.html">Browse Blog Archive</a>
+              <a class="button button-primary" href="about.html">About Me</a>
+              <a class="button button-secondary" href="blog.html">Open Blog</a>
             </div>
 
             <div class="hero-ledger">
               <div class="ledger-row">
-                <span>Current direction</span>
+                <span>Name</span>
+                <strong>Muhammad Ali Nazir</strong>
+              </div>
+              <div class="ledger-row">
+                <span>Degree</span>
                 <strong>Computer Engineering</strong>
               </div>
               <div class="ledger-row">
-                <span>Central mindset</span>
-                <strong>Resilience over regret</strong>
-              </div>
-              <div class="ledger-row">
-                <span>Publishing rhythm</span>
-                <strong>Weekly reflections</strong>
+                <span>University</span>
+                <strong>UET Lahore, Faisalabad Campus</strong>
               </div>
             </div>
           </div>
 
-          <div class="hero-stack">
-            <article class="manifesto-card">
-              <span class="card-kicker">Personal Thesis</span>
-              <h2>One result can redirect a future, but it does not reduce it.</h2>
-              <p>
-                Missing a path by a small margin can still become the beginning
-                of a better one when the response is honest, strategic, and
-                disciplined.
-              </p>
+          <div class="intro-side">
+            <article class="profile-panel">
+              <img
+                src="assets/profile-avatar.jpg"
+                alt="Portrait of Muhammad Ali Nazir"
+              />
+              <div class="profile-panel-body">
+                <span class="card-kicker">Introduction</span>
+                <h2>Focused on learning, reflection, and engineering growth.</h2>
+                <p>
+                  I am building a future in computer engineering with more
+                  clarity, discipline, and seriousness.
+                </p>
+              </div>
             </article>
 
-            <article class="hero-visual-card">
-              <img
-                src="assets/illustrations/hero-trajectory.svg"
-                alt="Illustration showing a journey from medical preparation toward engineering growth."
-              />
-              <div class="hero-visual-copy">
-                <span class="mini-label">Transition Map</span>
-                <p>Dream, setback, reset, commitment, and long-term engineering growth.</p>
-              </div>
+            <article class="hero-note-card">
+              <span class="card-kicker">Current Focus</span>
+              <p>
+                Developing skills, staying consistent, and documenting progress
+                through reflective weekly writing.
+              </p>
             </article>
           </div>
         </section>
 
-        <section class="overview-section" id="about">
-          <div class="overview-grid">
-            <article class="statement-card" data-reveal>
+        <section class="quick-links-section">
+          <div class="section-heading compact" data-reveal>
+            <p class="eyebrow">Explore</p>
+            <h2>Visit each part of the website separately.</h2>
+          </div>
+
+          <div class="quick-links-grid">
+            <a class="quick-link-card" href="about.html" data-reveal>
               <span class="card-kicker">About</span>
-              <h3>About Me</h3>
-              <ol class="identity-list">
-                <li>Muhammad Ali Nazir</li>
-                <li>Computer engineering student</li>
-                <li>Passionate learner</li>
-              </ol>
-            </article>
-
-            <article class="university-card" data-reveal>
-              <span class="card-kicker">University</span>
-              <h3>University of Engineering and Technology Lahore</h3>
-              <p class="university-campus">Faisalabad Campus</p>
+              <h3>Personal introduction</h3>
               <p>
-                Current academic home for my computer engineering journey and
-                the next stage of my long-term growth.
+                Read a direct summary of who I am, what I study, and where I am
+                building my future.
               </p>
-            </article>
-          </div>
-        </section>
+            </a>
 
-        <section class="journey-section" id="story">
-          <div class="section-heading" data-reveal>
-            <p class="eyebrow">Journey</p>
-            <h2>Timeline</h2>
-          </div>
-
-          <div class="journey-layout">
-            <div class="journey-track">
-              <article class="journey-card" data-reveal>
-                <span class="timeline-step">01</span>
-                <h3>MDCAT-first focus</h3>
-                <p>
-                  The original ambition was medicine, and preparation demanded
-                  full attention. That intensity built discipline, but it also
-                  made everything feel dependent on one outcome.
-                </p>
-              </article>
-
-              <article class="journey-card" data-reveal>
-                <span class="timeline-step">02</span>
-                <h3>A narrow miss</h3>
-                <p>
-                  Missing admission by a very small margin brought frustration,
-                  comparison, and a difficult emotional reset. It also forced a
-                  more realistic view of the future.
-                </p>
-              </article>
-
-              <article class="journey-card" data-reveal>
-                <span class="timeline-step">03</span>
-                <h3>A serious engineering commitment</h3>
-                <p>
-                  Computer engineering becomes meaningful when it is chosen with
-                  intention, backed by skill-building, practical work, and a
-                  forward-looking mindset.
-                </p>
-              </article>
-            </div>
-
-            <aside class="journey-aside">
-              <article class="aside-card" data-reveal>
-                <span class="card-kicker">What Changes Now</span>
-                <ul class="check-list">
-                  <li>The future is no longer defined by one exam.</li>
-                  <li>The focus shifts from uncertainty to practical skill.</li>
-                  <li>Weekly reflection becomes part of the growth process.</li>
-                </ul>
-              </article>
-
-              <article class="aside-card quote-panel" data-reveal>
-                <span class="card-kicker">Guiding Line</span>
-                <p>
-                  Success is not confined to one path. It can also be built
-                  through adjustment, maturity, and commitment to a better fit.
-                </p>
-              </article>
-            </aside>
-          </div>
-        </section>
-
-        <section class="featured-section" id="blog">
-          <div class="section-heading" data-reveal>
-            <p class="eyebrow">Blog</p>
-            <h2>Latest Post</h2>
-          </div>
-
-          <article class="feature-story" data-reveal>
-            <div class="feature-story-media">
-              <img
-                src="assets/illustrations/journal-cover.svg"
-                alt="Cover image for the first weekly reflection."
-              />
-            </div>
-
-            <div class="feature-story-body">
-              <div class="post-card-meta">
-                <span>Week 01</span>
-                <span>April 4, 2026</span>
-                <span>8 min read</span>
-              </div>
-              <h3>From MDCAT Dreams to Engineering Reality</h3>
+            <a class="quick-link-card" href="journey.html" data-reveal>
+              <span class="card-kicker">Journey</span>
+              <h3>Academic transition</h3>
               <p>
-                A reflection on intense MDCAT preparation, the emotional weight
-                of a near miss, and the decision to stop treating computer
-                engineering like a backup plan.
+                Follow the timeline from MDCAT ambition to a more serious
+                commitment to computer engineering.
               </p>
+            </a>
 
-              <div class="story-points">
-                <div class="story-point">Balancing MDCAT preparation with university studies</div>
-                <div class="story-point">Handling disappointment without losing direction</div>
-                <div class="story-point">Choosing engineering with intention and seriousness</div>
-              </div>
+            <a class="quick-link-card" href="blog.html" data-reveal>
+              <span class="card-kicker">Blog</span>
+              <h3>Weekly reflections</h3>
+              <p>
+                Open the writing archive and read the first post on growth,
+                setbacks, and direction.
+              </p>
+            </a>
 
-              <div class="hero-actions">
-                <a class="button button-primary" href="posts/mdcat-dreams-to-engineering-reality.html">
-                  Read Full Article
-                </a>
-                <a class="button button-secondary" href="blog.html">Open Full Archive</a>
-              </div>
-            </div>
-          </article>
-        </section>
-
-        <section class="cta-banner" id="contact" data-reveal>
-          <div>
-            <p class="eyebrow">Contact</p>
-            <h2>Contact Information</h2>
-          </div>
-
-          <div class="contact-details">
-            <div class="contact-item">
-              <span>Gmail</span>
-              <a href="mailto:ch365202@gmail.com">ch365202@gmail.com</a>
-            </div>
-            <div class="contact-item">
-              <span>WhatsApp</span>
-              <a href="https://wa.me/923137233725" target="_blank" rel="noreferrer">
-                03137233725
-              </a>
-            </div>
-            <a
-              class="button button-secondary"
-              href="https://github.com/M-Ali-25"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub Profile
+            <a class="quick-link-card" href="contact.html" data-reveal>
+              <span class="card-kicker">Contact</span>
+              <h3>Reach me directly</h3>
+              <p>
+                Find my Gmail, WhatsApp number, and a simple page for contact
+                information.
+              </p>
             </a>
           </div>
         </section>
       </main>
 
       <footer class="site-footer">
-        <p><span data-current-year></span> Muhammad Ali Nazir. Reflection, learning, and engineering growth.</p>
+        <p>
+          <span data-current-year></span> Muhammad Ali Nazir. Reflection,
+          learning, and engineering growth.
+        </p>
       </footer>
     </div>
   </body>
