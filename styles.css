@@ -156,7 +156,7 @@ ol {
 }
 
 .brand-copy strong {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   line-height: 1;
 }
 
@@ -302,6 +302,10 @@ ol {
 
 .page-hero-simple {
   padding: 2.8rem 0 1rem;
+}
+
+.home-intro {
+  max-width: 48rem;
 }
 
 .intro-hero {
@@ -541,6 +545,59 @@ ol {
 .feature-inline-button {
   margin-top: 0.35rem;
   pointer-events: none;
+}
+
+.about-page .statement-card {
+  background: linear-gradient(135deg, #1c3f66 0%, #4f92db 100%);
+  border-color: #2e5f98;
+}
+
+.about-page .statement-card .card-kicker {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+}
+
+.about-page .statement-card h3,
+.about-page .statement-card .identity-list,
+.about-page .statement-card .identity-list li {
+  color: #fff;
+}
+
+.about-page .intro-side {
+  justify-items: end;
+}
+
+.about-page .profile-panel {
+  width: min(100%, 250px);
+}
+
+.about-page .profile-panel img {
+  aspect-ratio: 1 / 1;
+  object-position: center 16%;
+}
+
+.about-page .profile-panel-body h2 {
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+}
+
+.blog-page .page-hero h1 {
+  font-size: clamp(1.85rem, 3.2vw, 2.8rem);
+  max-width: 14ch;
+}
+
+.blog-page .section-heading h2 {
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+}
+
+.blog-page .feature-story-body h3 {
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+}
+
+.blog-page .page-hero-copy p,
+.blog-page .feature-story-body p,
+.blog-page .story-point {
+  font-size: 0.9rem;
+  line-height: 1.7;
 }
 
 .overview-grid {
