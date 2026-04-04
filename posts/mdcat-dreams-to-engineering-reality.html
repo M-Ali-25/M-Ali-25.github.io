@@ -8,17 +8,21 @@
       name="description"
       content="A reflective post on missing medical admission by a small margin and choosing computer engineering with clarity and commitment."
     />
-    <meta name="theme-color" content="#143b63" />
+    <meta name="theme-color" content="#102f4d" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Sora:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Sora:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles.css" />
     <script src="../main.js" defer></script>
   </head>
-  <body class="article-page" data-base="..">
+  <body class="article-page" data-base=".." data-nav-current="blog">
+    <div class="reading-progress">
+      <span data-reading-progress></span>
+    </div>
+
     <div class="site-shell">
       <header class="site-header">
         <a class="brand" href="../index.html" aria-label="Ali Nazir Home">
@@ -43,9 +47,11 @@
         <nav class="site-nav" data-nav-links>
           <a href="../index.html#about">About</a>
           <a href="../index.html#story">Journey</a>
-          <a href="../blog.html">Blog</a>
+          <a href="../blog.html" data-nav-key="blog">Blog</a>
           <a href="../index.html#contact">Contact</a>
         </nav>
+
+        <a class="header-link" href="../blog.html">Archive</a>
       </header>
 
       <main class="article-main">
@@ -60,6 +66,7 @@
               recalibration, resilience, and the courage to choose a new path
               with purpose.
             </p>
+
             <div class="article-meta">
               <span>April 4, 2026</span>
               <span>8 min read</span>
@@ -67,190 +74,229 @@
             </div>
           </div>
 
-          <div class="article-cover">
+          <div class="article-cover-stack">
             <img
+              class="article-cover-image"
               src="../assets/illustrations/journal-cover.svg"
               alt="Illustration showing a student shifting from medical goals toward an engineering future."
             />
+            <div class="article-cover-note">
+              <span class="card-kicker">Core Message</span>
+              <p>
+                A redirected goal can still become a strong future when it is
+                met with maturity, perspective, and focused effort.
+              </p>
+            </div>
           </div>
         </section>
 
         <section class="article-layout">
           <aside class="article-side" data-reveal>
             <div class="side-card">
-              <span class="card-kicker">Core Themes</span>
-              <ul class="side-list">
-                <li>Resilience after a narrow setback</li>
-                <li>Balancing ambition with realism</li>
-                <li>Treating engineering as a real destination</li>
-              </ul>
+              <span class="card-kicker">On This Page</span>
+              <nav class="article-toc">
+                <a href="#overview">Overview</a>
+                <a href="#preparing-for-mdcat">Preparing for MDCAT</a>
+                <a href="#narrow-margin">Missing by a Narrow Margin</a>
+                <a href="#choosing-engineering">Choosing Engineering Seriously</a>
+                <a href="#closing-thought">Closing Thought</a>
+              </nav>
             </div>
 
             <div class="side-card">
-              <span class="card-kicker">Visual Notes</span>
-              <p>
-                This post uses custom illustrations to make the journey feel
-                more personal and less like a plain wall of text.
-              </p>
+              <span class="card-kicker">Core Themes</span>
+              <ul class="check-list">
+                <li>Resilience after a near miss</li>
+                <li>Balance between ambition and fallback plans</li>
+                <li>Engineering chosen as a meaningful path</li>
+              </ul>
             </div>
           </aside>
 
           <article class="article-content" data-reveal>
-            <p class="lead">
-              The transition from aspiring <strong>medical student</strong> to
-              pursuing a career in <strong>engineering</strong> represents a
-              significant turning point in a student’s academic journey. For
-              many, the ambition to clear the <strong>MDCAT</strong> is shaped
-              by years of preparation, <strong>societal expectations</strong>,
-              and a deep-rooted desire to enter the <strong>medical field</strong>.
-            </p>
-
-            <p>
-              However, the <strong>competitive nature</strong> of the
-              examination and <strong>limited admission opportunities</strong>
-              often mean that not all dedicated candidates achieve their
-              intended outcome. When this happens, students are faced with the
-              challenge of <strong>redefining their goals</strong> and
-              reassessing their future. Opting for
-              <strong>Computer Engineering</strong> in such circumstances is not
-              merely a fallback. It is a <strong>strategic decision</strong>
-              aligned with the evolving demands of the modern world.
-            </p>
-
-            <div class="quote-card">
-              <p>
-                Success is not confined to one path. It is often revealed by the
-                ability to adjust, grow, and still move forward with conviction.
+            <section class="article-block" id="overview">
+              <p class="lead">
+                The transition from aspiring <strong>medical student</strong> to
+                pursuing a career in <strong>engineering</strong> represents a
+                significant turning point in a student's academic journey. For
+                many, the ambition to clear the <strong>MDCAT</strong> is shaped
+                by years of preparation, <strong>societal expectations</strong>,
+                and a deep-rooted desire to enter the <strong>medical field</strong>.
               </p>
-            </div>
 
-            <h2>1.1 Preparing for MDCAT While Ignoring University Studies</h2>
-            <figure class="article-figure">
-              <img
-                src="../assets/illustrations/study-balance.svg"
-                alt="Illustration of study materials, time planning, and academic balance."
-              />
-              <figcaption>Preparation without balance can quietly weaken the backup path.</figcaption>
-            </figure>
+              <p>
+                However, the <strong>competitive nature</strong> of the
+                examination and <strong>limited admission opportunities</strong>
+                often mean that not all dedicated candidates achieve their
+                intended outcome. When this happens, students are faced with the
+                challenge of <strong>redefining their goals</strong> and
+                reassessing their future. Opting for
+                <strong>Computer Engineering</strong> in such circumstances is
+                not merely a fallback. It is a
+                <strong>strategic decision</strong> aligned with the evolving
+                demands of the modern world.
+              </p>
 
-            <p>
-              The preparation phase for the <strong>MDCAT</strong> is widely
-              regarded as one of the most demanding periods in a student’s
-              academic life. It requires extensive <strong>focus</strong>,
-              disciplined <strong>study routines</strong>, and a strong
-              commitment to mastering <strong>complex concepts</strong>. In this
-              process, many students unintentionally deprioritize their ongoing
-              <strong>university education</strong>, assuming that success in
-              the MDCAT will make current academic responsibilities irrelevant.
-            </p>
+              <div class="quote-card">
+                <p>
+                  Success is not confined to one path. It is often revealed by
+                  the ability to adjust, grow, and still move forward with
+                  conviction.
+                </p>
+              </div>
+            </section>
 
-            <p>
-              While that mindset is understandable, it can result in declining
-              <strong>academic performance</strong>, reduced engagement with
-              <strong>core subjects</strong>, and missed opportunities for
-              intellectual development. Students may attend fewer lectures,
-              delay <strong>assignments</strong>, and create an unstable balance
-              between two demanding tracks without a secure fallback strategy.
-            </p>
+            <section class="article-block" id="preparing-for-mdcat">
+              <h2>1.1 Preparing for MDCAT While Ignoring University Studies</h2>
 
-            <p>
-              The emotional cost is also real. Pressure increases when success
-              seems tied to a single examination. Without an alternative plan,
-              students can experience <strong>anxiety</strong>,
-              <strong>burnout</strong>, and reduced performance in both MDCAT
-              and university assessments. A healthier response is not to reduce
-              ambition, but to protect stability through balance.
-            </p>
+              <figure class="article-figure">
+                <img
+                  src="../assets/illustrations/study-balance.svg"
+                  alt="Illustration of study materials, time planning, and academic balance."
+                />
+                <figcaption>Preparation without balance can quietly weaken the backup path.</figcaption>
+              </figure>
 
-            <div class="callout">
-              <strong>Practical lesson:</strong> prioritizing MDCAT does not
-              have to mean abandoning the current degree. A balanced approach
-              keeps future options alive.
-            </div>
+              <p>
+                The preparation phase for the <strong>MDCAT</strong> is widely
+                regarded as one of the most demanding periods in a student's
+                academic life. It requires extensive <strong>focus</strong>,
+                disciplined <strong>study routines</strong>, and a strong
+                commitment to mastering <strong>complex concepts</strong>. In
+                this process, many students unintentionally deprioritize their
+                ongoing <strong>university education</strong>, assuming that
+                success in the MDCAT will make current academic responsibilities
+                irrelevant.
+              </p>
 
-            <h2>1.2 Missing Medical Admission by a Very Small Margin</h2>
-            <p>
-              Missing medical admission by a <strong>narrow margin</strong> can
-              feel far heavier than the numbers suggest. After months, and often
-              years, of preparation, a small gap in marks can create deep
-              <strong>disappointment</strong>, persistent
-              <strong>self-reflection</strong>, and a painful questioning of
-              one’s ability.
-            </p>
+              <p>
+                While that mindset is understandable, it can result in declining
+                <strong>academic performance</strong>, reduced engagement with
+                <strong>core subjects</strong>, and missed opportunities for
+                intellectual development. Students may attend fewer lectures,
+                delay <strong>assignments</strong>, and create an unstable
+                balance between two demanding tracks without a secure fallback
+                strategy.
+              </p>
 
-            <p>
-              That emotional effect becomes stronger when comparison enters the
-              picture. Watching peers secure admission while the difference is
-              minimal can produce a sense of exclusion. Students often replay
-              hypothetical scenarios, wondering how a few better decisions or a
-              slightly stronger performance might have changed everything.
-            </p>
+              <p>
+                The emotional cost is also real. Pressure increases when success
+                seems tied to a single examination. Without an alternative plan,
+                students can experience <strong>anxiety</strong>,
+                <strong>burnout</strong>, and reduced performance in both MDCAT
+                and university assessments. A healthier response is not to
+                reduce ambition, but to protect stability through balance.
+              </p>
 
-            <p>
-              Yet this kind of near miss should not be mistaken for a lack of
-              <strong>talent</strong> or <strong>effort</strong>. The MDCAT is
-              intensely competitive, and the number of seats is limited compared
-              with the number of capable candidates. A narrow shortfall often
-              says more about the system’s pressure than the student’s worth.
-            </p>
+              <div class="callout">
+                <strong>Practical lesson:</strong> prioritizing MDCAT does not
+                have to mean abandoning the current degree. A balanced approach
+                keeps future options alive.
+              </div>
+            </section>
 
-            <p>
-              Painful as it is, this moment can also become the point where
-              growth begins. It pushes students to re-evaluate their ambitions,
-              consider new disciplines, and develop the maturity needed to move
-              forward without losing self-respect.
-            </p>
+            <section class="article-block" id="narrow-margin">
+              <h2>1.2 Missing Medical Admission by a Very Small Margin</h2>
 
-            <h2>1.3 Accepting Reality and Choosing Computer Engineering Seriously</h2>
-            <figure class="article-figure">
-              <img
-                src="../assets/illustrations/engineering-future.svg"
-                alt="Illustration of a screen, code, and engineering progress elements."
-              />
-              <figcaption>Acceptance becomes powerful when it turns into focused action.</figcaption>
-            </figure>
+              <p>
+                Missing medical admission by a <strong>narrow margin</strong>
+                can feel far heavier than the numbers suggest. After months, and
+                often years, of preparation, a small gap in marks can create
+                deep <strong>disappointment</strong>, persistent
+                <strong>self-reflection</strong>, and a painful questioning of
+                one's ability.
+              </p>
 
-            <p>
-              Accepting a change in direction is one of the most important steps
-              in rebuilding momentum. Once the initial disappointment softens,
-              students are finally able to examine alternatives with more
-              clarity. Among them, <strong>Computer Engineering</strong> stands
-              out as a dynamic and future-facing discipline.
-            </p>
+              <p>
+                That emotional effect becomes stronger when comparison enters the
+                picture. Watching peers secure admission while the difference is
+                minimal can produce a sense of exclusion. Students often replay
+                hypothetical scenarios, wondering how a few better decisions or
+                a slightly stronger performance might have changed everything.
+              </p>
 
-            <p>
-              It should not be treated as a <strong>secondary option</strong>,
-              but as a deliberate path with real depth. The field stretches
-              across <strong>software development</strong>,
-              <strong>hardware design</strong>,
-              <strong>artificial intelligence</strong>, and
-              <strong>data systems</strong>. Its relevance across industries
-              makes it one of the most adaptable and high-impact fields in the
-              modern economy.
-            </p>
+              <p>
+                Yet this kind of near miss should not be mistaken for a lack of
+                <strong>talent</strong> or <strong>effort</strong>. The MDCAT is
+                intensely competitive, and the number of seats is limited
+                compared with the number of capable candidates. A narrow
+                shortfall often says more about the system's pressure than the
+                student's worth.
+              </p>
 
-            <p>
-              To grow in this field, students need a proactive approach:
-              stronger programming skills, real projects, and continuous
-              learning. Over time, many discover that engineering does more than
-              offer a backup. It reveals a direction that genuinely fits their
-              strengths and curiosity.
-            </p>
+              <p>
+                Painful as it is, this moment can also become the point where
+                growth begins. It pushes students to re-evaluate their
+                ambitions, consider new disciplines, and develop the maturity
+                needed to move forward without losing self-respect.
+              </p>
+            </section>
 
-            <p>
-              Redefining a goal is not failure. It is evidence of
-              <strong>adaptability</strong>, <strong>maturity</strong>, and the
-              willingness to keep building even after expectations change. By
-              embracing computer engineering with seriousness and vision,
-              students can create a fulfilling and meaningful future in a
-              technology-driven world.
-            </p>
+            <section class="article-block" id="choosing-engineering">
+              <h2>1.3 Accepting Reality and Choosing Computer Engineering Seriously</h2>
+
+              <figure class="article-figure">
+                <img
+                  src="../assets/illustrations/engineering-future.svg"
+                  alt="Illustration of a screen, code, and engineering progress elements."
+                />
+                <figcaption>Acceptance becomes powerful when it turns into focused action.</figcaption>
+              </figure>
+
+              <p>
+                Accepting a change in direction is one of the most important
+                steps in rebuilding momentum. Once the initial disappointment
+                softens, students are finally able to examine alternatives with
+                more clarity. Among them,
+                <strong>Computer Engineering</strong> stands out as a dynamic
+                and future-facing discipline.
+              </p>
+
+              <p>
+                It should not be treated as a <strong>secondary option</strong>,
+                but as a deliberate path with real depth. The field stretches
+                across <strong>software development</strong>,
+                <strong>hardware design</strong>,
+                <strong>artificial intelligence</strong>, and
+                <strong>data systems</strong>. Its relevance across industries
+                makes it one of the most adaptable and high-impact fields in the
+                modern economy.
+              </p>
+
+              <p>
+                To grow in this field, students need a proactive approach:
+                stronger programming skills, real projects, and continuous
+                learning. Over time, many discover that engineering does more
+                than offer a backup. It reveals a direction that genuinely fits
+                their strengths and curiosity.
+              </p>
+
+              <p>
+                Redefining a goal is not failure. It is evidence of
+                <strong>adaptability</strong>, <strong>maturity</strong>, and
+                the willingness to keep building even after expectations change.
+                By embracing computer engineering with seriousness and vision,
+                students can create a fulfilling and meaningful future in a
+                technology-driven world.
+              </p>
+            </section>
+
+            <section class="article-block closing-card" id="closing-thought">
+              <span class="card-kicker">Closing Thought</span>
+              <h2>This shift is not the end of an ambition. It is the beginning of a clearer one.</h2>
+              <p>
+                The value of this story is not just in the setback. It is in the
+                response: accepting reality, rethinking direction, and moving
+                into engineering with seriousness instead of hesitation.
+              </p>
+              <a class="button button-primary" href="../blog.html">Return to Blog Archive</a>
+            </section>
           </article>
         </section>
       </main>
 
       <footer class="site-footer">
-        <p><span data-current-year></span> Ali Nazir. New weekly reflections will appear in the blog archive.</p>
+        <p><span data-current-year></span> Ali Nazir. New weekly reflections will continue in the archive.</p>
       </footer>
     </div>
   </body>

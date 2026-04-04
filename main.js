@@ -40,7 +40,7 @@ function renderPosts() {
               <div class="post-card-tags">
                 ${post.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
               </div>
-              <a class="post-card-link" href="${resolvePath(post.href)}">Read article <span aria-hidden="true">→</span></a>
+              <a class="post-card-link" href="${resolvePath(post.href)}">Read article <span aria-hidden="true">&rarr;</span></a>
             </div>
           </article>
         `
@@ -59,6 +59,14 @@ function renderPosts() {
   }
 }
 
+function renderTagCloud() {
+  const cloud = document.querySelector("[data-tag-cloud]");
+  if (!cloud) return;
+
+  const tags = [...new Set(posts.flatMap((post) => post.tags))];
+  cloud.innerHTML = tags.map((tag) => `<span class="tag">${tag}</span>`).join("");
+}
+
 function revealOnScroll() {
   const revealItems = document.querySelectorAll("[data-reveal]");
   if (!revealItems.length) return;
@@ -72,7 +80,7 @@ function revealOnScroll() {
         }
       });
     },
-    { threshold: 0.18 }
+    { threshold: 0.16 }
   );
 
   revealItems.forEach((item) => observer.observe(item));
@@ -107,6 +115,15 @@ function setActiveNav() {
   const links = document.querySelectorAll(".site-nav a");
   if (!links.length) return;
 
+  const forcedKey = document.body.dataset.navCurrent;
+  if (forcedKey) {
+    const match = document.querySelector(`.site-nav a[data-nav-key="${forcedKey}"]`);
+    if (match) {
+      match.classList.add("is-active");
+      return;
+    }
+  }
+
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
   links.forEach((link) => {
     const href = link.getAttribute("href") || "";
@@ -118,8 +135,51 @@ function setActiveNav() {
   });
 }
 
+function setupReadingProgress() {
+  const progressBar = document.querySelector("[data-reading-progress]");
+  if (!progressBar) return;
+
+  const updateProgress = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const width = max > 0 ? (window.scrollY / max) * 100 : 0;
+    progressBar.style.width = `${Math.min(width, 100)}%`;
+  };
+
+  updateProgress();
+  window.addEventListener("scroll", updateProgress, { passive: true });
+  window.addEventListener("resize", updateProgress);
+}
+
+function setupArticleToc() {
+  const tocLinks = [...document.querySelectorAll(".article-toc a")];
+  if (!tocLinks.length) return;
+
+  const sections = tocLinks
+    .map((link) => {
+      const target = document.querySelector(link.getAttribute("href"));
+      return target ? { link, target } : null;
+    })
+    .filter(Boolean);
+
+  const syncActiveLink = () => {
+    const current = sections
+      .filter((item) => item.target.getBoundingClientRect().top <= 150)
+      .pop();
+
+    tocLinks.forEach((link) => link.classList.remove("is-active"));
+    (current || sections[0]).link.classList.add("is-active");
+  };
+
+  syncActiveLink();
+  window.addEventListener("scroll", syncActiveLink, { passive: true });
+}
+
+document.body.classList.add("js-enhanced");
 renderPosts();
+renderTagCloud();
 revealOnScroll();
 setCurrentYear();
 setupMenu();
 setActiveNav();
+setupReadingProgress();
+setupArticleToc();
