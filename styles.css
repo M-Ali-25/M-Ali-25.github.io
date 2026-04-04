@@ -845,7 +845,7 @@ ol {
 
 .blog-page .page-hero h1 {
   font-size: clamp(1.85rem, 3.2vw, 2.8rem);
-  max-width: 12ch;
+  max-width: 13ch;
 }
 
 .blog-page {
@@ -881,11 +881,11 @@ ol {
 
 .blog-page .page-hero-copy {
   position: relative;
-  padding: 1.55rem 1.6rem;
+  padding: 1.7rem 1.7rem 1.6rem;
   border: 1px solid rgba(205, 218, 236, 0.95);
-  border-radius: 30px;
+  border-radius: 32px;
   background: linear-gradient(145deg, rgba(252, 253, 255, 0.96), rgba(255, 248, 240, 0.9));
-  box-shadow: 0 20px 52px rgba(23, 59, 99, 0.12);
+  box-shadow: 0 24px 58px rgba(23, 59, 99, 0.13);
   overflow: hidden;
 }
 
@@ -903,6 +903,56 @@ ol {
 
 .blog-page .page-hero-copy p:last-child {
   max-width: 42rem;
+}
+
+.blog-hero-kicker {
+  position: relative;
+  z-index: 1;
+  margin-top: 1rem;
+  color: var(--accent-deep);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.blog-page .page-hero-copy h1 {
+  position: relative;
+  z-index: 1;
+  margin-top: 0.95rem;
+}
+
+.blog-page .page-hero-copy p:last-child {
+  position: relative;
+  z-index: 1;
+  max-width: 44rem;
+  color: #53647a;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.blog-hero-pills {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.35rem;
+}
+
+.blog-hero-pills span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.72rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(208, 220, 238, 0.96);
+  box-shadow: 0 10px 24px rgba(23, 59, 99, 0.08);
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .blog-list-section {
@@ -2010,6 +2060,15 @@ body.js-enhanced [data-reveal].is-visible {
     grid-template-columns: 1fr;
     gap: 0.55rem;
     padding: 1rem 1.05rem;
+  }
+
+  .blog-hero-pills {
+    gap: 0.55rem;
+  }
+
+  .blog-hero-pills span {
+    padding: 0.64rem 0.86rem;
+    font-size: 0.68rem;
   }
 
   .blog-minimal-meta {
