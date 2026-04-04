@@ -443,6 +443,26 @@ ol {
   margin-top: 0.8rem;
 }
 
+.campus-photo {
+  margin: 1rem 0 0.95rem;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.campus-photo img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.campus-photo-compact {
+  border-color: #d5e1f0;
+  background: var(--surface-blue);
+}
+
 .overview-section,
 .journey-section,
 .featured-section,
