@@ -323,7 +323,7 @@ ol {
 .manifesto-card,
 .hero-visual-card,
 .statement-card,
-.stat-tile,
+.university-card,
 .journey-card,
 .aside-card,
 .feature-story,
@@ -446,6 +446,7 @@ ol {
 }
 
 .statement-card h3,
+.university-card h3,
 .journey-card h3,
 .rhythm-card h3,
 .post-card h3 {
@@ -465,41 +466,31 @@ ol {
   line-height: 1.6;
 }
 
-.stats-panel {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.stat-tile {
-  padding: 1.2rem 1rem;
-  color: #fff;
-}
-
-.stat-tile:nth-child(1) {
+.university-card {
+  padding: 1.35rem;
   background: var(--primary);
 }
 
-.stat-tile:nth-child(2) {
-  background: var(--accent);
-}
-
-.stat-tile:nth-child(3) {
-  background: var(--sage);
-}
-
-.stat-tile strong {
-  display: block;
-  font-family: "Fraunces", serif;
-  font-size: 1.75rem;
+.university-card .card-kicker {
+  background: rgba(255, 255, 255, 0.14);
   color: #fff;
 }
 
-.stat-tile span {
-  display: block;
-  margin-top: 0.5rem;
-  color: rgba(255, 255, 255, 0.88);
-  line-height: 1.6;
+.university-card h3 {
+  color: #fff;
+  max-width: 18ch;
+}
+
+.university-card p {
+  color: rgba(255, 249, 242, 0.88);
+}
+
+.university-campus {
+  margin-bottom: 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .journey-layout {
@@ -1055,7 +1046,6 @@ body.js-enhanced [data-reveal].is-visible {
     grid-template-columns: 1fr;
   }
 
-  .stats-panel,
   .rhythm-grid,
   .post-grid,
   .archive-grid {
@@ -1122,7 +1112,6 @@ body.js-enhanced [data-reveal].is-visible {
     max-width: none;
   }
 
-  .stats-panel,
   .rhythm-grid,
   .post-grid,
   .archive-grid,
