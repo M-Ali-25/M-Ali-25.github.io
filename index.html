@@ -15,8 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Sora:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260404-4" />
-    <script src="main.js?v=20260404-4" defer></script>
+    <link rel="stylesheet" href="styles.css?v=20260404-5" />
+    <script src="main.js?v=20260404-5" defer></script>
   </head>
   <body class="home-page" data-base="." data-nav-current="home">
     <div class="site-shell">
@@ -44,13 +44,12 @@
 
         <nav class="site-nav" data-nav-links>
           <a href="index.html" data-nav-key="home">Home</a>
-          <a href="about.html" data-nav-key="about">About</a>
-          <a href="journey.html" data-nav-key="journey">Journey</a>
           <a href="blog.html" data-nav-key="blog">Blog</a>
+          <a href="about.html" data-nav-key="about">About</a>
           <a href="contact.html" data-nav-key="contact">Contact</a>
         </nav>
 
-        <a class="header-link" href="blog.html">Blog Archive</a>
+        <a class="header-link" href="blog.html">Blog</a>
       </header>
 
       <main class="page-main">
@@ -61,17 +60,17 @@
             <p class="hero-text">
               Computer engineering student at the University of Engineering and
               Technology Lahore, Faisalabad Campus, and a passionate learner
-              focused on consistent growth.
+              focused on steady growth.
             </p>
             <p class="hero-text">
-              This homepage is a simple introduction. My background, academic
-              journey, weekly blog, and contact details are now organized on
-              their own separate pages.
+              This home page is a simple introduction to who I am. My writing,
+              personal details, and contact information are organized on their
+              own separate pages.
             </p>
 
             <div class="hero-actions">
-              <a class="button button-primary" href="about.html">About Me</a>
-              <a class="button button-secondary" href="blog.html">Open Blog</a>
+              <a class="button button-primary" href="blog.html">Open Blog</a>
+              <a class="button button-secondary" href="about.html">About Me</a>
             </div>
 
             <div class="hero-ledger">
@@ -110,55 +109,47 @@
               <span class="card-kicker">Current Focus</span>
               <p>
                 Developing skills, staying consistent, and documenting progress
-                through reflective weekly writing.
+                through weekly writing.
               </p>
             </article>
           </div>
         </section>
 
-        <section class="quick-links-section">
-          <div class="section-heading compact" data-reveal>
-            <p class="eyebrow">Explore</p>
-            <h2>Visit each part of the website separately.</h2>
+        <section class="featured-section">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Featured Post</p>
+            <h2>Start with the first blog post.</h2>
           </div>
 
-          <div class="quick-links-grid">
-            <a class="quick-link-card" href="about.html" data-reveal>
-              <span class="card-kicker">About</span>
-              <h3>Personal introduction</h3>
-              <p>
-                Read a direct summary of who I am, what I study, and where I am
-                building my future.
-              </p>
-            </a>
+          <a class="feature-story feature-story-link" href="blog.html" data-reveal>
+            <div class="feature-story-media">
+              <img
+                src="assets/illustrations/journal-cover.svg"
+                alt="Cover image for the first weekly reflection."
+              />
+            </div>
 
-            <a class="quick-link-card" href="journey.html" data-reveal>
-              <span class="card-kicker">Journey</span>
-              <h3>Academic transition</h3>
+            <div class="feature-story-body">
+              <div class="post-card-meta">
+                <span>Week 01</span>
+                <span>April 4, 2026</span>
+                <span>8 min read</span>
+              </div>
+              <h3>From MDCAT Dreams to Engineering Reality</h3>
               <p>
-                Follow the timeline from MDCAT ambition to a more serious
-                commitment to computer engineering.
+                A reflection on preparation, disappointment, acceptance, and the
+                decision to choose computer engineering with seriousness.
               </p>
-            </a>
 
-            <a class="quick-link-card" href="blog.html" data-reveal>
-              <span class="card-kicker">Blog</span>
-              <h3>Weekly reflections</h3>
-              <p>
-                Open the writing archive and read the first post on growth,
-                setbacks, and direction.
-              </p>
-            </a>
+              <div class="story-points">
+                <div class="story-point">Medical ambition shaped by pressure and expectation</div>
+                <div class="story-point">A narrow miss that forced a reset</div>
+                <div class="story-point">Engineering chosen as a serious path forward</div>
+              </div>
 
-            <a class="quick-link-card" href="contact.html" data-reveal>
-              <span class="card-kicker">Contact</span>
-              <h3>Reach me directly</h3>
-              <p>
-                Find my Gmail, WhatsApp number, and a simple page for contact
-                information.
-              </p>
-            </a>
-          </div>
+              <span class="button button-primary feature-inline-button">Open Blog</span>
+            </div>
+          </a>
         </section>
       </main>
 

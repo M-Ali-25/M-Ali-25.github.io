@@ -300,6 +300,10 @@ ol {
   padding: 3rem 0 1.35rem;
 }
 
+.page-hero-simple {
+  padding: 2.8rem 0 1rem;
+}
+
 .intro-hero {
   grid-template-columns: minmax(0, 1.05fr) 360px;
   align-items: start;
@@ -519,6 +523,24 @@ ol {
 .quick-link-card h3 {
   margin: 0.8rem 0 0.65rem;
   font-size: 1.12rem;
+}
+
+.feature-story-link {
+  color: inherit;
+  transition: transform var(--transition), box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+.feature-story-link:hover,
+.feature-story-link:focus-visible {
+  transform: translateY(-3px);
+  border-color: #bdd0e8;
+  box-shadow: 0 20px 40px rgba(23, 59, 99, 0.14);
+}
+
+.feature-inline-button {
+  margin-top: 0.35rem;
+  pointer-events: none;
 }
 
 .overview-grid {
