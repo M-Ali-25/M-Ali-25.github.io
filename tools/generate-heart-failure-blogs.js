@@ -9,6 +9,201 @@ const professorLinks = {
   facebook: "https://www.facebook.com/Dr.BilalAhm",
 };
 
+const legacyPosts = [
+  {
+    number: 1,
+    title: "From MDCAT Dreams to Engineering Reality",
+    slug: "mdcat-dreams-to-engineering-reality",
+    date: "March 21, 2026",
+    readTime: "11 min read",
+    category: "Student Journey",
+    cover: "/assets/illustrations/journal-cover.svg",
+    alt: "Illustration showing a student moving from medical goals toward an engineering future.",
+    excerpt:
+      "A first-person reflection on missing MDCAT by a small margin, choosing computer engineering, and learning how one changed dream can still become a serious direction.",
+    note:
+      "This was the beginning of my engineering identity: accepting a changed path and still deciding to build something meaningful.",
+    themes: ["Engineering Journey", "Resilience", "Digital Footprint"],
+    tags: ["Student Journey", "Engineering", "Reflection"],
+    sections: [
+      ["The Dream That Changed Direction", [
+        "Before I entered computer engineering, my mind was attached to MDCAT and the medical field. Like many students, I had imagined one clear path for myself, and I thought that if I worked hard enough, that path would open exactly as planned. When the result came and I missed the target by a small margin, it felt heavier than I expected. It was not only about marks. It felt like a version of my future had suddenly closed.",
+        "At that time, I did not immediately understand how to respond. A narrow miss is difficult because it keeps a person thinking about what could have happened with only a little more preparation, a little more luck, or a little less pressure. For some days, I kept comparing myself with the dream I had carried. But slowly I understood that life was not asking me to stop. It was asking me to redirect my effort.",
+        "Choosing computer engineering at UET Lahore, Faisalabad Campus, became that redirection. It was not a casual decision. I wanted a field where logic, technology, problem solving, and real-world impact could still come together. Engineering gave me that possibility. The path was different from medicine, but it still demanded discipline, study, and purpose.",
+      ]],
+      ["Entering Engineering With Mixed Feelings", [
+        "When I joined engineering, I carried both hope and uncertainty. I was grateful for the opportunity, but I also knew I was entering a field where many students already had more exposure to computers and programming. I had to accept that I was not starting from comfort. I was starting from a place where I needed to rebuild confidence.",
+        "The early days taught me that a student can feel behind and still move forward. Computer engineering was new for me, but the habit of hard work was not new. What changed was the subject, the environment, and the kind of thinking required. Instead of memorizing biological terms, I had to understand logic, systems, circuits, databases, and programming structures.",
+        "This transition became one reason I started valuing a portfolio blog. A portfolio does not only show achievements after they are polished. It can also show the process of becoming. When Dr. Bilal Ahmad suggested building a digital footprint as students, I understood it as a chance to document not only success but also the honest journey behind success.",
+      ]],
+      ["Finding Guidance in the New Field", [
+        "In the first year, teachers mattered a lot because they shaped how I saw the field. Dr. Bilal Ahmad taught us Programming Fundamentals and Database Systems, and his approach helped connect engineering with practical value. He is an expert in AI, ML, and DL model training, but what influenced me most was how he connected technical learning with real problems.",
+        "He often encouraged us to work with meaningful datasets, especially medical datasets, because they are usually collected with care and precision. For me, that was interesting because my first dream was connected with medicine, and now computer engineering was giving me another way to engage with medical problems through data, databases, and machine learning. That connection made the changed path feel less like a loss and more like a new form of possibility.",
+        "This is why my later Heart Failure Prediction System project felt personal in a small way. It joined the medical world I once wanted with the engineering world I had entered. I was no longer trying to become a doctor, but I was learning how technology can support health-related analysis. That realization gave me motivation.",
+      ]],
+      ["Why This First Reflection Belongs on My Portfolio", [
+        "Writing this blog matters because it explains where my engineering journey started emotionally. A portfolio should not only list tools and projects. It should also show the person behind the work. My first step into engineering came after disappointment, adjustment, and a decision to keep building.",
+        "This practice of writing is useful because it creates a record that can grow with me. If someone reads my portfolio later, they will see that my technical journey did not begin perfectly. It began with a changed dream, a difficult acceptance, and then a serious effort to make the new path valuable. That is a real student experience.",
+        "I now see computer engineering as a field where I can still work on meaningful problems. The direction changed, but the desire to do useful work remained. That is why this first blog belongs before the technical posts. It gives context to the student who later started learning programming, databases, machine learning, and project deployment. #MLwithDrBilalAhmad #DrBilalAhmad #MLProject",
+      ]],
+    ],
+  },
+  {
+    number: 2,
+    title: "A Late Start: When First Semester Was Already Half Gone",
+    slug: "a-late-start-when-first-semester-was-already-half-gone",
+    date: "March 28, 2026",
+    readTime: "11 min read",
+    category: "Academic Reflection",
+    cover: "/assets/illustrations/late-start-semester.svg",
+    alt: "Illustration of a delayed semester start with notes, a clock, and a half-complete timeline.",
+    excerpt:
+      "A reflection on entering the semester late, facing pressure near mid exams, and learning that preparation cannot be delayed without consequences.",
+    note:
+      "A late start taught me that catching up is possible, but it costs much more energy than staying consistent from the beginning.",
+    themes: ["First Semester", "Time Management", "Academic Pressure"],
+    tags: ["First Semester", "Discipline", "Reflection"],
+    sections: [
+      ["Starting When Everyone Else Had Already Moved Ahead", [
+        "One of the hardest parts of my first semester was feeling that I had entered the race after it had already started. By the time I began taking the semester seriously, many classmates had already adjusted to the routine, the teachers, the subjects, and the speed of university life. I was still trying to understand where I stood.",
+        "This late start affected my confidence. In school and college, I had known how to prepare for exams in a familiar pattern. University felt different. The lectures moved quickly, labs required practice, and assignments could not be handled only by last-minute memorization. When mid exams came closer, I realized that I had underestimated the pace.",
+        "Programming Fundamentals was especially challenging because it required continuous practice. Dr. Bilal Ahmad taught us this course, and I slowly understood that programming cannot be learned only by reading notes. It has to be written, tested, corrected, and repeated. That lesson came to me late, but it came strongly.",
+      ]],
+      ["The Pressure of Pending Work", [
+        "The busiest weeks made the late start very obvious. Assignments were pending, quizzes were coming, and multiple subjects demanded attention at the same time. Digital Logic Design, Database Systems, and object-oriented concepts created pressure from different directions. We would go early, return tired, and sometimes barely find time to eat properly.",
+        "The pressure felt worse because I knew part of it came from my own delay. When preparation is postponed, normal work starts feeling like a mountain. A quiz that could have been manageable becomes stressful. A lab task that could have been practiced becomes frightening. This was one of the first hard lessons of university.",
+        "Still, those weeks also showed me that pressure can reveal weaknesses clearly. I could see where I lacked routine, where I needed better planning, and where I was depending too much on emergency effort. That realization was uncomfortable, but it was useful.",
+      ]],
+      ["Learning the Cost of Delay", [
+        "The main lesson I learned was that consistency is cheaper than recovery. If I had prepared earlier, I would still have faced difficulty, but it would not have felt so overwhelming. Because I delayed, I had to study under stress, revise quickly, and handle tasks without the calmness that comes from preparation.",
+        "In Database Systems, this lesson connected with project work too. Dr. Bilal Ahmad guided us toward meaningful implementation, and projects like database design or machine learning cannot be completed well through panic. They need step-by-step progress. A database design requires understanding the dataset, identifying entities, creating tables, checking relationships, and normalizing structure. These stages need time.",
+        "The late start taught me that university rewards regular effort. Even small daily progress can reduce the pressure of exams and assignments. I did not learn this lesson from advice only. I learned it from stress, fatigue, and the feeling of trying to catch up quickly.",
+      ]],
+      ["How I Want to Improve", [
+        "After that experience, I promised myself that I would prepare things on time in the future. This does not mean I became perfect immediately, but my awareness changed. I started understanding that discipline is not only about working hard. It is about working early enough so that hard work can be effective.",
+        "Writing this blog is part of that improvement because it turns a difficult experience into a record. A digital portfolio should show growth, and growth includes mistakes. If I only write about achievements, the story becomes incomplete. The late start was a real part of my semester, so it deserves to be documented.",
+        "Today, when I look at my project journey from databases to machine learning, I can see how important timing is. Dataset selection, ER diagram design, model training, and deployment planning all require patience. The lesson from my late start follows me into every technical task: start earlier, stay consistent, and do not wait for pressure to become the teacher. #MLwithDrBilalAhmad #DrBilalAhmad #MLProject",
+      ]],
+    ],
+  },
+  {
+    number: 3,
+    title: "Walking into Programming Fundamentals with Zero Background",
+    slug: "walking-into-programming-fundamentals-with-zero-background",
+    date: "April 4, 2026",
+    readTime: "11 min read",
+    category: "Programming Fundamentals",
+    cover: "/assets/illustrations/programming-zero-background.svg",
+    alt: "Illustration of a student learning programming fundamentals from scratch.",
+    excerpt:
+      "A first-hand account of learning Python, variables, loops, functions, and logic when I had no previous programming background.",
+    note:
+      "Programming looked confusing at first, but practice slowly changed it from fear into a language of problem solving.",
+    themes: ["Python", "Logic Building", "Beginner Learning"],
+    tags: ["Programming Fundamentals", "Python", "Learning Journey"],
+    sections: [
+      ["Entering Programming Without a Base", [
+        "Programming Fundamentals was one of the courses that made me feel the difference between school learning and engineering learning. I entered it with almost no coding background. Some students already knew basic programming ideas, but for me even simple terms like variables, loops, and functions needed serious attention.",
+        "At first, Python looked simple because the syntax seemed readable. But when I had to solve problems myself, I realized that programming is not only about reading code. It is about thinking in steps. The computer does exactly what we tell it, and if our logic is incomplete, the output exposes it immediately.",
+        "Dr. Bilal Ahmad taught us Programming Fundamentals, and his course made me understand that programming is the base for many later fields. Database work, machine learning, and deployment all become easier when programming logic becomes stronger. I did not understand this fully in the beginning, but later projects proved it.",
+      ]],
+      ["The Confusion Around Logic", [
+        "The hardest part was not typing code. The hardest part was forming logic. I could understand an example when someone explained it, but writing a solution from scratch was different. A loop made sense in theory, but deciding where to start it, when to stop it, and what to update inside it required practice.",
+        "Functions also took time. At first, I saw them as extra complexity. Later I understood that functions help organize code and avoid repetition. This lesson became useful in machine learning too, where preprocessing, training, prediction, and evaluation can be separated into clean steps.",
+        "Debugging was another new experience. Errors felt frustrating, but they also forced me to read carefully. A missing colon, wrong indentation, or incorrect variable name could stop the program. Slowly, I learned that errors are not always failure. Sometimes they are the program telling us exactly where our thinking needs correction.",
+      ]],
+      ["Connecting Programming With Real Problems", [
+        "The importance of programming became clearer when I saw how it connects with real projects. In the Heart Failure Prediction System, Python was used to load data, visualize it, encode categorical values, split the dataset, train models, evaluate predictions, and save the trained model. Without Programming Fundamentals, those later steps would have felt impossible.",
+        "This is why Dr. Bilal Ahmad's guidance about real-world datasets mattered. Programming becomes more meaningful when it is connected to a problem that has value. Medical datasets, especially, show how code can support analysis in serious domains. Even as students, we can learn how software and data can work together.",
+        "When I think about AI, ML, and DL now, I understand that they are not separate from basic programming. They are built on it. A model may sound advanced, but the workflow still depends on variables, conditions, functions, libraries, files, and logic. My beginner struggle was part of the foundation.",
+      ]],
+      ["How Zero Background Became a Starting Point", [
+        "Having zero background was difficult, but it also gave me a clear view of my own progress. Every small concept I understood felt like a real step. The first correct program, the first loop that worked, the first function that returned the expected value, and the first project output all mattered.",
+        "This blog belongs on my portfolio because many students start from zero and feel embarrassed about it. I want my digital footprint to show that starting late or starting weak is not the end. The important thing is to continue practicing until confusion becomes understanding.",
+        "Programming Fundamentals gave me the language I later used in database and machine learning work. It taught me patience, precision, and logical thinking. I still have a long way to go, but this course changed the way I approach technical problems. #MLwithDrBilalAhmad #DrBilalAhmad #MLProject",
+      ]],
+    ],
+  },
+  {
+    number: 4,
+    title: "Learning Under Pressure: Nights of Self-Study",
+    slug: "learning-under-pressure-nights-of-self-study",
+    date: "April 11, 2026",
+    readTime: "11 min read",
+    category: "Self Study",
+    cover: "/assets/illustrations/self-study-nights.svg",
+    alt: "Illustration of late-night study with code notes and a laptop.",
+    excerpt:
+      "A reflection on late-night self-study, missed concepts, lab pressure, and the discipline that slowly helped me recover.",
+    note:
+      "Self-study became the place where panic slowly turned into practice.",
+    themes: ["Self Study", "Discipline", "Practice"],
+    tags: ["Self Study", "Programming Practice", "Discipline"],
+    sections: [
+      ["Why Nights Became Study Time", [
+        "There were many nights in the semester when I studied because I had no other option. The day would pass in classes, labs, travel, and fatigue, and then the real catching up started at night. It was not always ideal, but it became part of my routine during the difficult weeks.",
+        "The pressure came from missed concepts and pending work. When I did not understand something in class, I had to return to it later on my own. Programming examples, database concepts, and lab tasks all needed extra time. At night, the noise of the day reduced, and I could finally sit with the problem.",
+        "This self-study was not glamorous. Sometimes I felt sleepy, sometimes frustrated, and sometimes worried about whether I would ever become comfortable with the subjects. But those nights also built a habit of not giving up quickly.",
+      ]],
+      ["Covering Missed Programming Concepts", [
+        "A major part of my self-study was Programming Fundamentals. I practiced loops, conditions, functions, lists, and small Python programs. At first, even simple problems could take a lot of time. But each solved problem gave me a little more confidence.",
+        "Dr. Bilal Ahmad's Programming Fundamentals course made it clear that concepts need practice. Listening in class was important, but practice was where the concept became mine. If I could write the logic myself without copying, then I knew I had actually learned something.",
+        "The same habit later helped me in machine learning. When I worked with Pandas, Scikit-learn, encoding, train-test split, and model evaluation, I was still depending on the basic logic I had practiced earlier. Late-night self-study was quietly preparing me for bigger tasks.",
+      ]],
+      ["Managing Stress Before Labs and Quizzes", [
+        "Labs and quizzes created a different kind of pressure because they tested understanding quickly. A student can read theory, but a lab asks for action. If the concept is weak, the weakness appears immediately. This made preparation stressful, especially when multiple subjects had assessments close together.",
+        "I learned that stress becomes worse when tasks are unclear. So I started breaking work into smaller parts. Instead of thinking, I have to learn everything, I would choose one concept, one program, or one query. This made the work more manageable.",
+        "In Database Systems, this helped me understand SQL and design steps gradually. Creating a database, defining tables, inserting data, applying normalization, and generating an ER diagram all became easier when treated as a sequence. This is also how Dr. Bilal Ahmad encouraged project thinking: step by step, with practical value in mind.",
+      ]],
+      ["The Value of Quiet Improvement", [
+        "Self-study taught me that improvement is not always visible immediately. Some nights felt unproductive, but the effect appeared later when a concept became easier or a task took less time. This kind of progress is quiet, but it is real.",
+        "Writing about these nights is important because a portfolio should not show only final polished outcomes. Behind every project screenshot, there are hours of confusion, searching, trying, failing, and trying again. Those hours are part of the learning process.",
+        "Now when I look at my Database to ML project journey, I can see the value of those study nights. The discipline I built while catching up helped me handle dataset analysis, MySQL Workbench, Python preprocessing, and ML training. Pressure was not pleasant, but it forced me to become more serious. #MLwithDrBilalAhmad #DrBilalAhmad #MLProject",
+        "This experience also changed how I want to present myself online. If my GitHub portfolio only shows final results, it misses the hidden effort behind them. By writing about self-study honestly, I can show that my technical growth came through repeated attempts, not instant understanding. That is a valuable part of my digital footprint as a computer engineering student.",
+      ]],
+    ],
+  },
+  {
+    number: 5,
+    title: "My First Achievement: Machine Learning Project",
+    slug: "my-first-achievement-machine-learning-project",
+    date: "April 18, 2026",
+    readTime: "11 min read",
+    category: "Machine Learning",
+    cover: "/assets/illustrations/machine-learning-project.svg",
+    alt: "Illustration of a machine learning dashboard with charts and code.",
+    excerpt:
+      "A reflection on my first machine learning achievement and how it changed the way I saw programming, data, and real-world problem solving.",
+    note:
+      "My first ML project showed me that code can become evidence of learning.",
+    themes: ["Machine Learning", "Python Project", "Achievement"],
+    tags: ["Machine Learning", "Python Project", "Achievement"],
+    sections: [
+      ["Why the First Project Felt Important", [
+        "My first machine learning project felt like an achievement because it changed my relationship with programming. Before that, programming often felt like a subject I had to survive. A project made it feel like a tool I could use to build something visible. That shift was important for my confidence.",
+        "A project is different from a single exercise. It asks the student to connect multiple ideas and produce an outcome. Data has to be understood, code has to be written, errors have to be solved, and results have to be explained. This complete process made the work feel meaningful.",
+        "Dr. Bilal Ahmad often encourages students to use machine learning on problems that have real value. His expertise in AI, ML, and DL model training made this direction feel serious. I started understanding that machine learning is not only about algorithms; it is about choosing a problem, preparing data, training carefully, and interpreting results responsibly.",
+      ]],
+      ["Applying Python Beyond Basic Practice", [
+        "The project helped me apply Python beyond small programs. I had to think about libraries, data handling, model training, and output. Even if the project was beginner-level, it showed me the path from code to result. That was exciting because I could finally see why earlier programming concepts mattered.",
+        "Python became more than syntax. It became a way to work with data. Pandas could load tables, visualization libraries could show patterns, and Scikit-learn could train models. These tools made me feel that computer engineering connects directly with real-world analysis.",
+        "This experience prepared me for the later Heart Failure Prediction System. In that project, I used the same general thinking but with a stronger pipeline: dataset selection, database design, CSV export, preprocessing, Random Forest training, confusion matrix evaluation, model saving, and inference.",
+      ]],
+      ["The Exhibition Feeling", [
+        "One of the proud moments was being able to present project work instead of only submitting it silently. Standing beside a project gives a different feeling. It makes the work public. It also forces the student to explain what was done, why it was done, and how it works.",
+        "The Database Systems Exhibition later gave me an even stronger version of that feeling. My heart failure prediction work was not only a file on my laptop. It became something I could connect with a banner, a GUI, an ER diagram, and a full project story. That kind of presentation helps a student grow.",
+        "A portfolio blog extends the exhibition feeling online. It lets the project remain visible after the event ends. This is one of the advantages of maintaining a GitHub portfolio: the learning does not disappear inside a folder. It becomes part of a public academic identity.",
+      ]],
+      ["What This Achievement Taught Me", [
+        "My first ML achievement taught me that technical confidence grows through building. Reading is necessary, but building gives proof. When I can point to a project and explain its parts, I feel that the learning has become more real.",
+        "It also taught me that machine learning depends on earlier foundations. Programming fundamentals, database thinking, data cleaning, and evaluation all matter. A model is only one part of the system. The surrounding workflow decides whether the project is understandable and useful.",
+        "This blog is placed before the detailed Database to ML series because it shows the emotional beginning of my project confidence. From this point, I could move toward a more complete system: the Heart Failure Prediction System using database design and machine learning. #MLwithDrBilalAhmad #DrBilalAhmad #MLProject",
+        "It also helped me understand why Dr. Bilal Ahmad asks students to document their work. A project becomes more powerful when the student can explain the thinking behind it. Screenshots show output, but writing shows reflection, and reflection is what turns a small achievement into a step in a larger learning journey.",
+      ]],
+    ],
+  },
+];
+
 const posts = [
   {
     number: 1,
@@ -382,6 +577,14 @@ const posts = [
   },
 ];
 
+const allPosts = [
+  ...legacyPosts,
+  ...posts.map((post) => ({
+    ...post,
+    number: post.number + legacyPosts.length,
+  })),
+];
+
 function html(strings, ...values) {
   return strings.reduce((out, part, i) => out + part + (values[i] ?? ""), "");
 }
@@ -406,7 +609,7 @@ function renderPortfolioReflection(post) {
               <h2>Portfolio Reflection and Digital Footprint</h2>
               <p>One reason I am writing this post in detail is that a portfolio should show more than final screenshots. It should show the thinking process behind a student project. When someone visits my GitHub portfolio, I want them to see how I moved from a rough idea to a structured technical journey. This is also why the blog format is useful. It lets me explain the choices, the confusion, the corrections, and the small moments where a concept finally started making sense.</p>
               <p>Dr. Bilal Ahmad suggested this practice as part of our growth as computer engineering students, and I now understand the advantage more clearly. A digital footprint can help future teachers, classmates, recruiters, and even my own future self see evidence of learning. It is easy to say that I studied Database Systems or worked on machine learning, but it is stronger to document the actual steps, tools, and lessons. That record makes the learning visible.</p>
-              <p>I also tried to keep this writing connected with the real project instead of making it sound like a general internet article. The Heart Failure Prediction System gave me a meaningful base because it joined database design, data quality, machine learning, and deployment thinking. Readers can also explore ${professorProfileLink(post.number)} to understand the academic and professional background behind the guidance that shaped this work.</p>
+              <p>I also tried to keep this writing connected with my real semester experience instead of making it sound like a general internet article. The full portfolio gives me a meaningful base because it joins personal adjustment, Programming Fundamentals, Database Systems, machine learning, and project thinking. Readers can also explore ${professorProfileLink(post.number)} to understand the academic and professional background behind the guidance that shaped this work.</p>
             </section>`;
 }
 
@@ -505,7 +708,7 @@ ${body}
 ${renderPortfolioReflection(post)}
             <section class="article-block closing-card" id="closing-thought">
               <span class="card-kicker">Closing Thought</span>
-              <h2>This post is one part of my Database to ML portfolio journey.</h2>
+              <h2>This post is one part of my engineering portfolio journey.</h2>
               <p>Writing it helped me convert coursework into a visible record of learning, reflection, and technical growth.</p>
               <a class="button button-primary" href="/blog/">Return to Blog</a>
             </section>
@@ -529,7 +732,7 @@ function renderPostObject(post) {
     readTime: ${JSON.stringify(post.readTime)},
     excerpt: ${JSON.stringify(post.excerpt)},
     highlights: ${JSON.stringify(post.themes)},
-    tags: ${JSON.stringify([post.category, "Heart Failure Project", "MLProject"])},
+    tags: ${JSON.stringify(post.tags || [post.category, "Heart Failure Project", "MLProject"])},
     cover: ${JSON.stringify(post.cover)},
     coverAlt: ${JSON.stringify(post.alt)},
   }`;
@@ -540,7 +743,7 @@ function updateMainJs() {
   let text = fs.readFileSync(mainPath, "utf8");
   const start = text.indexOf("const posts = [");
   const end = text.indexOf("];", start) + 2;
-  const replacement = `const posts = [\n${posts.map(renderPostObject).join(",\n")}\n];`;
+  const replacement = `const posts = [\n${allPosts.map(renderPostObject).join(",\n")}\n];`;
   text = text.slice(0, start) + replacement + text.slice(end);
   fs.writeFileSync(mainPath, text);
 }
@@ -556,7 +759,7 @@ function updateBlogPage() {
   text = text.replace("Moments, milestones, and lessons from my journey.", "From database design to machine learning deployment.");
   text = text.replace(
     "A personal collection of reflections on growth, discipline,\n              programming, and the experiences shaping my path in engineering.",
-    "A connected 10-post portfolio series documenting my Heart Failure Prediction System: dataset selection, MySQL database design, machine learning training, inference, and FastAPI deployment planning."
+    "A connected 15-post portfolio series: first my student journey and Programming Fundamentals growth, then my Heart Failure Prediction System from dataset selection to database design, machine learning, inference, and FastAPI deployment planning."
   );
   text = text.replace("<span>Reflections</span>\n              <span>Projects</span>\n              <span>Growth</span>", "<span>Database Systems</span>\n              <span>Machine Learning</span>\n              <span>FastAPI</span>");
   text = text.replace("Personal writing,\n          one blog at a time.", "Database Systems, Machine Learning, and deployment learning.");
@@ -588,42 +791,16 @@ function updateHomePage() {
 }
 
 function writeArticles() {
-  for (const post of posts) {
+  for (const post of allPosts) {
     const dir = path.join(root, "posts", post.slug);
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(path.join(dir, "index.html"), renderArticle(post));
   }
 }
 
-function writeLegacyRedirects() {
-  const legacy = [
-    "a-late-start-when-first-semester-was-already-half-gone",
-    "learning-under-pressure-nights-of-self-study",
-    "mdcat-dreams-to-engineering-reality",
-    "my-first-achievement-machine-learning-project",
-    "walking-into-programming-fundamentals-with-zero-background",
-  ];
-  for (const slug of legacy) {
-    const dir = path.join(root, "posts", slug);
-    if (!fs.existsSync(dir)) continue;
-    fs.writeFileSync(
-      path.join(dir, "index.html"),
-      `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="refresh" content="0; url=/blog/" /><title>Redirecting | Ali Nazir</title><link rel="canonical" href="/blog/" /></head><body><p>This older reflection has been replaced by the updated Database to ML portfolio series. <a href="/blog/">Open the current blog archive</a>.</p></body></html>\n`
-    );
-    const flat = path.join(root, "posts", `${slug}.html`);
-    if (fs.existsSync(flat)) {
-      fs.writeFileSync(
-        flat,
-        `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta http-equiv="refresh" content="0; url=/blog/" /><title>Redirecting | Ali Nazir</title><link rel="canonical" href="/blog/" /></head><body><p>This older reflection has been replaced by the updated Database to ML portfolio series. <a href="/blog/">Open the current blog archive</a>.</p></body></html>\n`
-      );
-    }
-  }
-}
-
 writeArticles();
-writeLegacyRedirects();
 updateMainJs();
 updateBlogPage();
 updateHomePage();
 
-console.log(`Generated ${posts.length} portfolio blog posts.`);
+console.log(`Generated ${allPosts.length} portfolio blog posts.`);
