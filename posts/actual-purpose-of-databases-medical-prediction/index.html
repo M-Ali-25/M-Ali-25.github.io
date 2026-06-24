@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Understanding the Actual Purpose of Databases in a Medical Prediction System | Ali Nazir</title>
+    <meta name="description" content="This post reflects on why databases exist, what problems they solve, and why data integrity became serious when the dataset represented patient health factors." />
+    <meta name="theme-color" content="#102f4d" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=20260624-1" />
+    <script src="/main.js?v=20260624-1" defer></script>
+  </head>
+  <body class="article-page" data-base="." data-nav-current="blog">
+    <div class="reading-progress"><span data-reading-progress></span></div>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Muhammad Ali Nazir Home">
+          <span class="brand-mark"><img src="/assets/profile-avatar.jpg" alt="Portrait of Muhammad Ali Nazir" /></span>
+          <span class="brand-copy"><strong>Ali Nazir</strong><small>Engineering Journal</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation" data-menu-button><span></span><span></span></button>
+        <nav class="site-nav" data-nav-links>
+          <a href="/" data-nav-key="home">Home</a>
+          <a href="/blog/" data-nav-key="blog">Blog</a>
+          <a href="/about/" data-nav-key="about">About</a>
+          <a href="/contact/" data-nav-key="contact">Contact</a>
+        </nav>
+      </header>
+      <main class="article-main">
+        <section class="article-hero" data-reveal>
+          <div class="article-intro">
+            <a class="back-link" href="/blog/">Back to Blog</a>
+            <p class="eyebrow">Blog 2</p>
+            <h1>Understanding the Actual Purpose of Databases in a Medical Prediction System</h1>
+            <p class="article-summary">This post reflects on why databases exist, what problems they solve, and why data integrity became serious when the dataset represented patient health factors.</p>
+            <div class="article-meta">
+              <span>June 3, 2026</span>
+              <span>12 min read</span>
+              <span>Database Purpose</span>
+            </div>
+          </div>
+          <div class="article-cover-stack">
+            <img class="article-cover-image" src="/assets/project-report/heart-failure-project-03.jpeg" alt="Screenshot from the database project showing heart failure dataset work." />
+            <div class="article-cover-note">
+              <span class="card-kicker">Core Message</span>
+              <p>A database protects meaning. It keeps a project from becoming a pile of disconnected values.</p>
+            </div>
+          </div>
+        </section>
+        <section class="article-layout">
+          <aside class="article-side" data-reveal>
+            <div class="side-card">
+              <span class="card-kicker">On This Page</span>
+              <nav class="article-toc">
+                <a href="#why-databases-exist">Why Databases Exist</a>
+                <a href="#problems-solved-by-databases">Problems Solved by Databases</a>
+                <a href="#integrity-security-and-real-value">Integrity, Security, and Real Value</a>
+                <a href="#modern-data-driven-systems">Modern Data-Driven Systems</a>
+                <a href="#portfolio-reflection">Portfolio Reflection</a>
+              </nav>
+            </div>
+            <div class="side-card">
+              <span class="card-kicker">Core Themes</span>
+              <div class="tag-cloud"><span class="tag">Data integrity</span><span class="tag">Security</span><span class="tag">Business value</span></div>
+            </div>
+          </aside>
+          <article class="article-content" data-reveal>
+
+            <section class="article-block" id="why-databases-exist">
+              <h2>Why Databases Exist</h2>
+              
+              <p class="lead">The actual purpose of databases became clearer to me when I stopped thinking about them as only storage. Storage is one part of the story, but the deeper purpose is control, consistency, and trust. In my heart failure prediction project, the data represented patient-related health attributes. Even though this was an academic dataset, the topic itself demanded seriousness. Age, cholesterol, blood pressure, ECG result, and heart disease status are not ordinary values. They carry meaning, and that meaning should not be damaged by careless handling.</p>
+              <p>During Database Systems, Dr. Bilal Ahmad repeatedly guided us toward real-world thinking. He did not want us to treat a dataset as decoration for a project. He wanted us to ask whether the source was authentic, whether the data had value, and whether the design could support future analysis. That mindset helped me understand why databases exist in modern systems. They exist because data becomes useful only when it can be trusted, updated, protected, and retrieved correctly.</p>
+              <p>For this project, I selected the Kaggle heart failure prediction dataset after checking that it had documentation, a clear structure, and relevance to the problem. I also noticed that not every available dataset is reliable. Some datasets look attractive at first, but they lack explanation, source quality, or completeness. This searching process made me realize that the purpose of a database begins even before table creation. It begins with choosing data that deserves to be structured.</p>
+            </section>
+
+            <section class="article-block" id="problems-solved-by-databases">
+              <h2>Problems Solved by Databases</h2>
+              
+              <figure class="article-figure">
+                <img src="/assets/project-report/heart-failure-project-03.jpeg" alt="Screenshot from the database project showing heart failure dataset work." />
+                <figcaption>A database protects meaning. It keeps a project from becoming a pile of disconnected values.</figcaption>
+              </figure>
+              <p>A major problem databases solve is redundancy. If the same patient information is repeated in many places, one small change can create inconsistency. For example, if age, diagnosis, ECG information, and risk level are all stored together without structure, the system becomes harder to maintain. A normalized database separates information into meaningful tables and connects them through keys. This reduces repeated data and makes the system cleaner.</p>
+              <p>Another problem is retrieval. A CSV file can be opened and read, but it does not give the same power as SQL queries. In MySQL Workbench, I could create tables, insert records, and query specific information. That helped me see why databases are used in hospitals, banks, universities, and companies. These organizations need fast access to accurate information, and they cannot depend on scattered files for serious operations.</p>
+              <p>Databases also solve the problem of uncontrolled change. In a proper DBMS, data types, constraints, primary keys, and foreign keys protect the structure. They make sure that records follow rules. When I designed the Patient, Clinical Details, ECG Details, Diagnosis, and Risk Assessment tables, I saw how foreign keys could preserve the connection between one patient and their related medical information.</p>
+            </section>
+
+            <section class="article-block" id="integrity-security-and-real-value">
+              <h2>Integrity, Security, and Real Value</h2>
+              
+              <p>Data integrity became one of the strongest lessons of the project. If the database allows incorrect or inconsistent values, the machine learning model can learn from weak input. That means database design affects model quality. This was important because our final system aimed to predict whether a patient may have heart disease based on medical attributes. A model may look advanced, but it depends on the quality of the data behind it.</p>
+              <p>Security was another concept that started to make more sense. In real medical systems, patient data must be protected. Even though my project used an open academic dataset, the subject helped me imagine real-world responsibilities. A database is not just a technical structure; it is also part of ethical data handling. Access control, reliable storage, and careful design matter when data belongs to people.</p>
+              <p>The business benefits of databases also became visible. A good database saves time, reduces errors, supports analysis, and improves decision-making. In a healthcare setting, organized data can support dashboards, predictions, reports, and research. This connects closely with the direction Dr. Bilal Ahmad often emphasizes: using AI, ML, and DL on problems that have practical value, especially where high-quality datasets can lead to meaningful insights.</p>
+            </section>
+
+            <section class="article-block" id="modern-data-driven-systems">
+              <h2>Modern Data-Driven Systems</h2>
+              
+              <p>Modern systems are data-driven. Whether it is a web app, a hospital dashboard, an online store, or a machine learning pipeline, data is usually at the center. My project helped me see that a database is not a separate topic from machine learning. It is part of the same journey. The database organizes data, the preprocessing step prepares it, the model learns from it, and the deployment layer makes it usable.</p>
+              <p>This is why writing about the project on a portfolio is useful. It documents the journey from raw understanding to practical implementation. A portfolio blog also improves my digital footprint as a computer engineering student because it shows not only what I built, but how I thought through it. Anyone can list tools, but a blog explains the learning process behind those tools.</p>
+              <p>I now understand databases as a discipline of responsibility. They solve technical problems, but they also support trust. In my heart failure prediction project, the database made the ML part stronger because it forced me to slow down and respect the structure of the data. That lesson will stay with me beyond this semester. #MLwithDrBilalAhmad #DrBilalAhmad #MLProject</p>
+            </section>
+
+            <section class="article-block" id="portfolio-reflection">
+              <h2>Portfolio Reflection and Digital Footprint</h2>
+              <p>One reason I am writing this post in detail is that a portfolio should show more than final screenshots. It should show the thinking process behind a student project. When someone visits my GitHub portfolio, I want them to see how I moved from a rough idea to a structured technical journey. This is also why the blog format is useful. It lets me explain the choices, the confusion, the corrections, and the small moments where a concept finally started making sense.</p>
+              <p>Dr. Bilal Ahmad suggested this practice as part of our growth as computer engineering students, and I now understand the advantage more clearly. A digital footprint can help future teachers, classmates, recruiters, and even my own future self see evidence of learning. It is easy to say that I studied Database Systems or worked on machine learning, but it is stronger to document the actual steps, tools, and lessons. That record makes the learning visible.</p>
+              <p>I also tried to keep this writing connected with the real project instead of making it sound like a general internet article. The Heart Failure Prediction System gave me a meaningful base because it joined database design, data quality, machine learning, and deployment thinking. Readers can also explore <a href="https://scholar.google.com.au/citations?user=8nZ0jVkAAAAJ&hl=en" target="_blank" rel="noopener">Dr. Bilal Ahmad's Google Scholar profile</a> to understand the academic and professional background behind the guidance that shaped this work.</p>
+            </section>
+            <section class="article-block closing-card" id="closing-thought">
+              <span class="card-kicker">Closing Thought</span>
+              <h2>This post is one part of my Database to ML portfolio journey.</h2>
+              <p>Writing it helped me convert coursework into a visible record of learning, reflection, and technical growth.</p>
+              <a class="button button-primary" href="/blog/">Return to Blog</a>
+            </section>
+          </article>
+        </section>
+      </main>
+      <footer class="site-footer"><p><span data-current-year></span> Muhammad Ali Nazir. Database, machine learning, and engineering growth.</p></footer>
+    </div>
+  </body>
+</html>

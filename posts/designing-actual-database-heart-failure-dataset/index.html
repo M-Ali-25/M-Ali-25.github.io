@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Designing the Actual Database for My Heart Failure Dataset | Ali Nazir</title>
+    <meta name="description" content="This post follows my real database design process: requirement analysis, entity identification, ER thinking, relational schema creation, and normalization." />
+    <meta name="theme-color" content="#102f4d" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=20260624-1" />
+    <script src="/main.js?v=20260624-1" defer></script>
+  </head>
+  <body class="article-page" data-base="." data-nav-current="blog">
+    <div class="reading-progress"><span data-reading-progress></span></div>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Muhammad Ali Nazir Home">
+          <span class="brand-mark"><img src="/assets/profile-avatar.jpg" alt="Portrait of Muhammad Ali Nazir" /></span>
+          <span class="brand-copy"><strong>Ali Nazir</strong><small>Engineering Journal</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation" data-menu-button><span></span><span></span></button>
+        <nav class="site-nav" data-nav-links>
+          <a href="/" data-nav-key="home">Home</a>
+          <a href="/blog/" data-nav-key="blog">Blog</a>
+          <a href="/about/" data-nav-key="about">About</a>
+          <a href="/contact/" data-nav-key="contact">Contact</a>
+        </nav>
+      </header>
+      <main class="article-main">
+        <section class="article-hero" data-reveal>
+          <div class="article-intro">
+            <a class="back-link" href="/blog/">Back to Blog</a>
+            <p class="eyebrow">Blog 4</p>
+            <h1>Designing the Actual Database for My Heart Failure Dataset</h1>
+            <p class="article-summary">This post follows my real database design process: requirement analysis, entity identification, ER thinking, relational schema creation, and normalization.</p>
+            <div class="article-meta">
+              <span>June 7, 2026</span>
+              <span>13 min read</span>
+              <span>Database Design</span>
+            </div>
+          </div>
+          <div class="article-cover-stack">
+            <img class="article-cover-image" src="/assets/photos/heart-failure-erd.png" alt="Entity relationship diagram for the normalized heart failure prediction database." />
+            <div class="article-cover-note">
+              <span class="card-kicker">Core Message</span>
+              <p>Designing the database forced me to move from knowing SQL commands to thinking like a system designer.</p>
+            </div>
+          </div>
+        </section>
+        <section class="article-layout">
+          <aside class="article-side" data-reveal>
+            <div class="side-card">
+              <span class="card-kicker">On This Page</span>
+              <nav class="article-toc">
+                <a href="#requirement-analysis">Requirement Analysis</a>
+                <a href="#entity-identification">Entity Identification</a>
+                <a href="#er-diagram-and-relational-schema">ER Diagram and Relational Schema</a>
+                <a href="#normalization-as-a-design-discipline">Normalization as a Design Discipline</a>
+                <a href="#portfolio-reflection">Portfolio Reflection</a>
+              </nav>
+            </div>
+            <div class="side-card">
+              <span class="card-kicker">Core Themes</span>
+              <div class="tag-cloud"><span class="tag">ER design</span><span class="tag">Schema</span><span class="tag">MySQL Workbench</span></div>
+            </div>
+          </aside>
+          <article class="article-content" data-reveal>
+
+            <section class="article-block" id="requirement-analysis">
+              <h2>Requirement Analysis</h2>
+              
+              <p class="lead">Designing the actual database began with requirement analysis. I had to understand what the heart failure prediction dataset contained and what the project needed from it. The dataset had 12 main attributes, including Age, Sex, ChestPainType, RestingBP, Cholesterol, FastingBS, RestingECG, MaxHR, ExerciseAngina, Oldpeak, ST_Slope, and HeartDisease. The target variable was HeartDisease, showing whether heart disease was present or absent.</p>
+              <p>At this stage, I did not want to jump directly into table creation. The first responsibility was to understand the meaning of the data. Which attributes described the patient? Which described clinical condition? Which belonged to ECG-related results? Which represented final diagnosis or risk? These questions helped me separate the dataset into logical groups instead of blindly placing everything into one table.</p>
+              <p>This approach was influenced by the way Dr. Bilal Ahmad connected Database Systems with practical AI and ML work. He often trained us to think about the value of the problem and the reliability of the data before focusing on tools. In this project, that meant the database design had to respect the medical meaning of the dataset.</p>
+            </section>
+
+            <section class="article-block" id="entity-identification">
+              <h2>Entity Identification</h2>
+              
+              <figure class="article-figure">
+                <img src="/assets/photos/heart-failure-erd.png" alt="Entity relationship diagram for the normalized heart failure prediction database." />
+                <figcaption>Designing the database forced me to move from knowing SQL commands to thinking like a system designer.</figcaption>
+              </figure>
+              <p>After requirement analysis, I identified the main entity as Patient. Each row in the dataset represented one patient, so Patient became the center of the design. From there, I identified additional entities: Clinical Details, ECG Details, Diagnosis, and Risk Assessment. These entities helped me organize the features according to their role in the project.</p>
+              <p>The Clinical Details table included values such as resting blood pressure, cholesterol, fasting blood sugar, maximum heart rate, and oldpeak. The ECG Details table included chest pain type, resting ECG, exercise angina, and ST slope. The Diagnosis table stored the heart disease result. The Risk Assessment table stored extra features such as RiskScore and RiskLevel, which I created during the database design process.</p>
+              <p>Adding features like AgeGroup, BP_Category, Cholesterol_Category, MaxHR_Category, RiskScore, and RiskLevel made the database more useful for analysis. These features were not added randomly. They were based on health-related logic and helped convert raw numerical values into more interpretable categories.</p>
+            </section>
+
+            <section class="article-block" id="er-diagram-and-relational-schema">
+              <h2>ER Diagram and Relational Schema</h2>
+              
+              <p>Once the entities were identified, I moved toward the relational schema. PatientID became the key that connected all tables. Patient served as the central table, while Clinical Details, ECG Details, Diagnosis, and Risk Assessment referenced PatientID as a foreign key. This design made the system organized and reduced confusion.</p>
+              <p>The ER diagram helped me visually confirm the design. I used MySQL Workbench reverse engineering to generate the ER diagram after creating the tables. This step was important because it allowed me to see whether the structure I had imagined was actually represented correctly. The diagram showed the central role of Patient and the relationships extending from it.</p>
+              <p>For me, the ER diagram was not just a formal deliverable. It was a way to check my own thinking. When I saw the tables connected visually, I understood the project as a system rather than a collection of SQL statements. That made the database design feel complete.</p>
+            </section>
+
+            <section class="article-block" id="normalization-as-a-design-discipline">
+              <h2>Normalization as a Design Discipline</h2>
+              
+              <p>Normalization was one of the most important parts of this stage. I first created an unnormalized table to hold the raw dataset. This helped me preserve the original structure before dividing it. Then I moved through 1NF, 2NF, and 3NF to reduce redundancy and improve data integrity.</p>
+              <p>In 1NF, every attribute had atomic values. In 2NF, the tables were checked so that non-key attributes depended fully on the primary key. In 3NF, unnecessary dependency between non-key attributes was reduced. These steps made the database more professional and easier to maintain.</p>
+              <p>By the end of this stage, I felt that I had moved from basic SQL practice to real database design. MySQL Workbench gave me the implementation environment, but the main learning was in the decisions. I learned that good design is not about creating many tables; it is about creating the right tables for the right reasons. #MLwithDrBilalAhmad #DrBilalAhmad #MLProject</p>
+            </section>
+
+            <section class="article-block" id="portfolio-reflection">
+              <h2>Portfolio Reflection and Digital Footprint</h2>
+              <p>One reason I am writing this post in detail is that a portfolio should show more than final screenshots. It should show the thinking process behind a student project. When someone visits my GitHub portfolio, I want them to see how I moved from a rough idea to a structured technical journey. This is also why the blog format is useful. It lets me explain the choices, the confusion, the corrections, and the small moments where a concept finally started making sense.</p>
+              <p>Dr. Bilal Ahmad suggested this practice as part of our growth as computer engineering students, and I now understand the advantage more clearly. A digital footprint can help future teachers, classmates, recruiters, and even my own future self see evidence of learning. It is easy to say that I studied Database Systems or worked on machine learning, but it is stronger to document the actual steps, tools, and lessons. That record makes the learning visible.</p>
+              <p>I also tried to keep this writing connected with the real project instead of making it sound like a general internet article. The Heart Failure Prediction System gave me a meaningful base because it joined database design, data quality, machine learning, and deployment thinking. Readers can also explore <a href="https://www.linkedin.com/in/drbilalphd/" target="_blank" rel="noopener">Dr. Bilal Ahmad on LinkedIn</a> to understand the academic and professional background behind the guidance that shaped this work.</p>
+            </section>
+            <section class="article-block closing-card" id="closing-thought">
+              <span class="card-kicker">Closing Thought</span>
+              <h2>This post is one part of my Database to ML portfolio journey.</h2>
+              <p>Writing it helped me convert coursework into a visible record of learning, reflection, and technical growth.</p>
+              <a class="button button-primary" href="/blog/">Return to Blog</a>
+            </section>
+          </article>
+        </section>
+      </main>
+      <footer class="site-footer"><p><span data-current-year></span> Muhammad Ali Nazir. Database, machine learning, and engineering growth.</p></footer>
+    </div>
+  </body>
+</html>

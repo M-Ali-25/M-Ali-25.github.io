@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deploying the Model Using FastAPI: Turning Predictions into a Usable Service | Ali Nazir</title>
+    <meta name="description" content="How the saved model and inference script point toward FastAPI deployment, prediction endpoints, database integration, and monitoring." />
+    <meta name="theme-color" content="#102f4d" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=20260624-1" />
+    <script src="/main.js?v=20260624-1" defer></script>
+  </head>
+  <body class="article-page" data-base="." data-nav-current="blog">
+    <div class="reading-progress"><span data-reading-progress></span></div>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Muhammad Ali Nazir Home">
+          <span class="brand-mark"><img src="/assets/profile-avatar.jpg" alt="Portrait of Muhammad Ali Nazir" /></span>
+          <span class="brand-copy"><strong>Ali Nazir</strong><small>Engineering Journal</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation" data-menu-button><span></span><span></span></button>
+        <nav class="site-nav" data-nav-links>
+          <a href="/" data-nav-key="home">Home</a>
+          <a href="/blog/" data-nav-key="blog">Blog</a>
+          <a href="/about/" data-nav-key="about">About</a>
+          <a href="/contact/" data-nav-key="contact">Contact</a>
+        </nav>
+      </header>
+      <main class="article-main">
+        <section class="article-hero" data-reveal>
+          <div class="article-intro">
+            <a class="back-link" href="/blog/">Back to Blog</a>
+            <p class="eyebrow">Blog 9</p>
+            <h1>Deploying the Model Using FastAPI: Turning Predictions into a Usable Service</h1>
+            <p class="article-summary">How the saved model and inference script point toward FastAPI deployment, prediction endpoints, database integration, and monitoring.</p>
+            <div class="article-meta">
+              <span>June 17, 2026</span>
+              <span>12 min read</span>
+              <span>Deployment</span>
+            </div>
+          </div>
+          <div class="article-cover-stack">
+            <img class="article-cover-image" src="/assets/photos/heart-failure-gui.png" alt="Graphical user interface for the Heart Failure Prediction System." />
+            <div class="article-cover-note">
+              <span class="card-kicker">Core Message</span>
+              <p>Deployment is where a model stops being only a file and starts becoming a service that other software can use.</p>
+            </div>
+          </div>
+        </section>
+        <section class="article-layout">
+          <aside class="article-side" data-reveal>
+            <div class="side-card">
+              <span class="card-kicker">On This Page</span>
+              <nav class="article-toc">
+                <a href="#why-fastapi-fits-the-next-stage">Why FastAPI Fits the Next Stage</a>
+                <a href="#integrating-the-trained-model">Integrating the Trained Model</a>
+                <a href="#prediction-endpoints-and-database-integration">Prediction Endpoints and Database Integration</a>
+                <a href="#from-inference-script-to-production-thinking">From Inference Script to Production Thinking</a>
+                <a href="#portfolio-reflection">Portfolio Reflection</a>
+              </nav>
+            </div>
+            <div class="side-card">
+              <span class="card-kicker">Core Themes</span>
+              <div class="tag-cloud"><span class="tag">FastAPI</span><span class="tag">Inference</span><span class="tag">Endpoints</span></div>
+            </div>
+          </aside>
+          <article class="article-content" data-reveal>
+
+            <section class="article-block" id="why-fastapi-fits-the-next-stage">
+              <h2>Why FastAPI Fits the Next Stage</h2>
+              
+              <p class="lead">After training and saving the model, the next natural step is deployment. In my current project report, I implemented an inference script that loads the trained model, takes user input, and predicts whether heart disease is likely. That script proves that the saved model can work on unseen data. FastAPI would be the next upgrade because it can turn that prediction logic into a web service.</p>
+              <p>FastAPI is useful because it allows Python functions to become API endpoints. Instead of running the script manually every time, a frontend, mobile app, or another backend service could send patient input to an endpoint and receive a prediction. This would make the project more practical and closer to real-world software.</p>
+              <p>This deployment thinking also connects with the broader learning direction encouraged by Dr. Bilal Ahmad. Database Systems gave structure to the data, machine learning gave prediction ability, and deployment would make the model accessible. A full project should not stop at training if the goal is real usability.</p>
+            </section>
+
+            <section class="article-block" id="integrating-the-trained-model">
+              <h2>Integrating the Trained Model</h2>
+              
+              <figure class="article-figure">
+                <img src="/assets/photos/heart-failure-gui.png" alt="Graphical user interface for the Heart Failure Prediction System." />
+                <figcaption>Deployment is where a model stops being only a file and starts becoming a service that other software can use.</figcaption>
+              </figure>
+              <p>The first deployment step would be loading the saved Random Forest model inside a FastAPI application. Since I saved the trained model using Joblib, the API can load it when the app starts. The same preprocessing logic used during training should also be applied during prediction so that input values match the format the model expects.</p>
+              <p>This is important because a model cannot understand raw text categories unless they are encoded in the same way as training. For example, Sex, ChestPainType, RestingECG, ExerciseAngina, and ST_Slope need consistent encoding. If deployment ignores preprocessing, the prediction endpoint may produce incorrect results even if the model itself was trained properly.</p>
+              <p>A well-designed API would define a request body containing patient features such as age, sex, chest pain type, resting blood pressure, cholesterol, fasting blood sugar, ECG result, maximum heart rate, exercise angina, oldpeak, and ST slope. The endpoint would validate the input, transform it, pass it to the model, and return the prediction.</p>
+            </section>
+
+            <section class="article-block" id="prediction-endpoints-and-database-integration">
+              <h2>Prediction Endpoints and Database Integration</h2>
+              
+              <p>The main FastAPI endpoint could be named something like predict. It would accept patient data and return a response such as Heart Disease: YES or Heart Disease: NO, similar to my inference script. A better response could also include a risk level or probability if the model supports it. This would make the output more informative.</p>
+              <p>Database integration would make the deployment stronger. The API could connect to the MySQL database to store prediction requests, retrieve patient records, or log model outputs. This would complete the loop between database design and machine learning deployment. The project would no longer be separated into isolated parts; it would become one system.</p>
+              <p>Monitoring would also matter in a real deployment. The system should record prediction activity, watch for errors, and track whether incoming data looks different from the training data. Even though this is beyond the current academic report, thinking about it helps me understand how real ML systems are maintained.</p>
+            </section>
+
+            <section class="article-block" id="from-inference-script-to-production-thinking">
+              <h2>From Inference Script to Production Thinking</h2>
+              
+              <p>My current inference script already demonstrates the core idea. It imports the necessary libraries, loads the trained model, takes user input, processes the values, and returns a prediction. This is the seed of deployment. FastAPI would simply wrap that logic in a form that other software can call.</p>
+              <p>This step helped me understand the difference between a model and a product. A model file is useful to the developer, but an API is useful to a system. A deployed endpoint allows prediction to become part of a larger workflow. That is why deployment is such an important stage in the Database to ML journey.</p>
+              <p>For my portfolio, this blog shows future readiness. Even if the current implementation is based on an inference script, I now understand how it can be upgraded into FastAPI deployment. That understanding matters because it shows the complete path from data selection to database design, machine learning, and practical service delivery. #MLwithDrBilalAhmad #DrBilalAhmad #MLProject</p>
+            </section>
+
+            <section class="article-block" id="portfolio-reflection">
+              <h2>Portfolio Reflection and Digital Footprint</h2>
+              <p>One reason I am writing this post in detail is that a portfolio should show more than final screenshots. It should show the thinking process behind a student project. When someone visits my GitHub portfolio, I want them to see how I moved from a rough idea to a structured technical journey. This is also why the blog format is useful. It lets me explain the choices, the confusion, the corrections, and the small moments where a concept finally started making sense.</p>
+              <p>Dr. Bilal Ahmad suggested this practice as part of our growth as computer engineering students, and I now understand the advantage more clearly. A digital footprint can help future teachers, classmates, recruiters, and even my own future self see evidence of learning. It is easy to say that I studied Database Systems or worked on machine learning, but it is stronger to document the actual steps, tools, and lessons. That record makes the learning visible.</p>
+              <p>I also tried to keep this writing connected with the real project instead of making it sound like a general internet article. The Heart Failure Prediction System gave me a meaningful base because it joined database design, data quality, machine learning, and deployment thinking. Readers can also explore <a href="https://www.facebook.com/Dr.BilalAhm" target="_blank" rel="noopener">Dr. Bilal Ahmad's Facebook page</a> to understand the academic and professional background behind the guidance that shaped this work.</p>
+            </section>
+            <section class="article-block closing-card" id="closing-thought">
+              <span class="card-kicker">Closing Thought</span>
+              <h2>This post is one part of my Database to ML portfolio journey.</h2>
+              <p>Writing it helped me convert coursework into a visible record of learning, reflection, and technical growth.</p>
+              <a class="button button-primary" href="/blog/">Return to Blog</a>
+            </section>
+          </article>
+        </section>
+      </main>
+      <footer class="site-footer"><p><span data-current-year></span> Muhammad Ali Nazir. Database, machine learning, and engineering growth.</p></footer>
+    </div>
+  </body>
+</html>

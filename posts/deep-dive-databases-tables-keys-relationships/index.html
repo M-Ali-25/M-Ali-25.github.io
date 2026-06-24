@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deep Dive into Databases: Tables, Keys, Relationships, and ACID Thinking | Ali Nazir</title>
+    <meta name="description" content="A detailed reflection on the database concepts that became practical when I separated the heart failure dataset into related tables." />
+    <meta name="theme-color" content="#102f4d" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=20260624-1" />
+    <script src="/main.js?v=20260624-1" defer></script>
+  </head>
+  <body class="article-page" data-base="." data-nav-current="blog">
+    <div class="reading-progress"><span data-reading-progress></span></div>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Muhammad Ali Nazir Home">
+          <span class="brand-mark"><img src="/assets/profile-avatar.jpg" alt="Portrait of Muhammad Ali Nazir" /></span>
+          <span class="brand-copy"><strong>Ali Nazir</strong><small>Engineering Journal</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation" data-menu-button><span></span><span></span></button>
+        <nav class="site-nav" data-nav-links>
+          <a href="/" data-nav-key="home">Home</a>
+          <a href="/blog/" data-nav-key="blog">Blog</a>
+          <a href="/about/" data-nav-key="about">About</a>
+          <a href="/contact/" data-nav-key="contact">Contact</a>
+        </nav>
+      </header>
+      <main class="article-main">
+        <section class="article-hero" data-reveal>
+          <div class="article-intro">
+            <a class="back-link" href="/blog/">Back to Blog</a>
+            <p class="eyebrow">Blog 3</p>
+            <h1>Deep Dive into Databases: Tables, Keys, Relationships, and ACID Thinking</h1>
+            <p class="article-summary">A detailed reflection on the database concepts that became practical when I separated the heart failure dataset into related tables.</p>
+            <div class="article-meta">
+              <span>June 5, 2026</span>
+              <span>12 min read</span>
+              <span>Relational Design</span>
+            </div>
+          </div>
+          <div class="article-cover-stack">
+            <img class="article-cover-image" src="/assets/project-report/heart-failure-project-04.jpeg" alt="Screenshot showing database design and schema work in the project report." />
+            <div class="article-cover-note">
+              <span class="card-kicker">Core Message</span>
+              <p>Tables became clearer when each table had a reason to exist and each key had a job to do.</p>
+            </div>
+          </div>
+        </section>
+        <section class="article-layout">
+          <aside class="article-side" data-reveal>
+            <div class="side-card">
+              <span class="card-kicker">On This Page</span>
+              <nav class="article-toc">
+                <a href="#tables-records-and-attributes">Tables, Records, and Attributes</a>
+                <a href="#keys-and-constraints">Keys and Constraints</a>
+                <a href="#relationships-and-normalization">Relationships and Normalization</a>
+                <a href="#transactions-and-acid-thinking">Transactions and ACID Thinking</a>
+                <a href="#portfolio-reflection">Portfolio Reflection</a>
+              </nav>
+            </div>
+            <div class="side-card">
+              <span class="card-kicker">Core Themes</span>
+              <div class="tag-cloud"><span class="tag">Keys</span><span class="tag">Constraints</span><span class="tag">Normalization</span></div>
+            </div>
+          </aside>
+          <article class="article-content" data-reveal>
+
+            <section class="article-block" id="tables-records-and-attributes">
+              <h2>Tables, Records, and Attributes</h2>
+              
+              <p class="lead">The deeper I went into the heart failure prediction project, the more I realized that relational databases are built on simple ideas used with discipline. A table looks simple from the outside, but it becomes powerful when every row and column has a clear purpose. In the raw dataset, each record represented one patient, and each attribute represented one health-related feature. At first, that looked manageable as one table, but the design improved when I began separating related groups of information.</p>
+              <p>The Patient table held basic patient identity and demographic information such as PatientID, Age, Sex, and AgeGroup. Clinical Details handled attributes like RestingBP, Cholesterol, FastingBS, MaxHR, Oldpeak, and categories created from those values. ECG Details stored chest pain type, resting ECG, exercise angina, and ST slope. Diagnosis stored the HeartDisease target variable. Risk Assessment stored the risk score and risk level. This separation made the project easier to understand.</p>
+              <p>This was the moment when database theory became visible in my own work. Dr. Bilal Ahmad had taught Database Systems as a course where concepts should become implementation. When I created these tables in MySQL Workbench, I was not only writing SQL. I was making decisions about how the medical data should be represented.</p>
+            </section>
+
+            <section class="article-block" id="keys-and-constraints">
+              <h2>Keys and Constraints</h2>
+              
+              <figure class="article-figure">
+                <img src="/assets/project-report/heart-failure-project-04.jpeg" alt="Screenshot showing database design and schema work in the project report." />
+                <figcaption>Tables became clearer when each table had a reason to exist and each key had a job to do.</figcaption>
+              </figure>
+              <p>Primary keys and foreign keys became especially important in this project. The PatientID acted as the central identity for each patient. Without it, the tables would become disconnected. With it, every clinical record, ECG record, diagnosis record, and risk assessment could be linked back to the correct patient. That link is what made the relational design meaningful.</p>
+              <p>Constraints also helped me understand how databases protect data quality. A primary key prevents duplicate identity confusion. A foreign key ensures that a related record cannot exist without a valid patient. Data types ensure that numbers, text, and categories are stored in suitable formats. These are not just formal rules. They are protective boundaries around the project.</p>
+              <p>In a medical prediction context, this protection matters even more. If a diagnosis is linked to the wrong patient, the meaning of the dataset collapses. If clinical data is repeated or inconsistent, the model can become less reliable. This project helped me see that database constraints support the honesty of the whole system.</p>
+            </section>
+
+            <section class="article-block" id="relationships-and-normalization">
+              <h2>Relationships and Normalization</h2>
+              
+              <p>Database relationships made the design feel like a map. The Patient table was the central table, and other tables connected to it through PatientID. This one-to-one or one-to-many style of thinking made the dataset more organized. Instead of seeing all columns as a flat list, I started seeing groups of meaning.</p>
+              <p>Normalization was the next step. In 1NF, I ensured that attributes had atomic values and no repeating groups. In 2NF, I checked that non-key attributes depended properly on the key. In 3NF, I removed transitive dependencies so that non-key attributes did not depend unnecessarily on other non-key attributes. These steps reduced redundancy and improved consistency.</p>
+              <p>Before doing this project, normalization felt like a theoretical topic that could be memorized for exams. After implementing it, I understood why it exists. A normalized database is easier to update, easier to understand, and less likely to produce contradictions. That is especially useful when the database will later support machine learning.</p>
+            </section>
+
+            <section class="article-block" id="transactions-and-acid-thinking">
+              <h2>Transactions and ACID Thinking</h2>
+              
+              <p>Although my project focused more on design, the idea of transactions and ACID properties also became easier to appreciate. Atomicity, Consistency, Isolation, and Durability explain why databases are trusted in serious systems. In real healthcare software, a patient update should either complete properly or not happen at all. The database should remain consistent even when multiple users or processes interact with it.</p>
+              <p>This made me think about databases beyond assignments. A hospital system, for example, cannot afford random partial updates or unreliable records. Even if my project was academic, the same principles point toward real software engineering. The more serious the domain, the more important the database discipline becomes.</p>
+              <p>This deep dive gave me confidence because it joined theory with implementation. I could look at the project and identify tables, records, attributes, primary keys, foreign keys, constraints, relationships, and normalization decisions. That is the kind of understanding I wanted my portfolio to show: not only that I completed a project, but that I learned the thinking behind it. #MLwithDrBilalAhmad #DrBilalAhmad #MLProject</p>
+            </section>
+
+            <section class="article-block" id="portfolio-reflection">
+              <h2>Portfolio Reflection and Digital Footprint</h2>
+              <p>One reason I am writing this post in detail is that a portfolio should show more than final screenshots. It should show the thinking process behind a student project. When someone visits my GitHub portfolio, I want them to see how I moved from a rough idea to a structured technical journey. This is also why the blog format is useful. It lets me explain the choices, the confusion, the corrections, and the small moments where a concept finally started making sense.</p>
+              <p>Dr. Bilal Ahmad suggested this practice as part of our growth as computer engineering students, and I now understand the advantage more clearly. A digital footprint can help future teachers, classmates, recruiters, and even my own future self see evidence of learning. It is easy to say that I studied Database Systems or worked on machine learning, but it is stronger to document the actual steps, tools, and lessons. That record makes the learning visible.</p>
+              <p>I also tried to keep this writing connected with the real project instead of making it sound like a general internet article. The Heart Failure Prediction System gave me a meaningful base because it joined database design, data quality, machine learning, and deployment thinking. Readers can also explore <a href="https://www.facebook.com/Dr.BilalAhm" target="_blank" rel="noopener">Dr. Bilal Ahmad's Facebook page</a> to understand the academic and professional background behind the guidance that shaped this work.</p>
+            </section>
+            <section class="article-block closing-card" id="closing-thought">
+              <span class="card-kicker">Closing Thought</span>
+              <h2>This post is one part of my Database to ML portfolio journey.</h2>
+              <p>Writing it helped me convert coursework into a visible record of learning, reflection, and technical growth.</p>
+              <a class="button button-primary" href="/blog/">Return to Blog</a>
+            </section>
+          </article>
+        </section>
+      </main>
+      <footer class="site-footer"><p><span data-current-year></span> Muhammad Ali Nazir. Database, machine learning, and engineering growth.</p></footer>
+    </div>
+  </body>
+</html>

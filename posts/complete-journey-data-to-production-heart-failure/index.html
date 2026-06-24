@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complete Journey: From Data to Production in My Heart Failure Prediction System | Ali Nazir</title>
+    <meta name="description" content="A complete semester reflection on dataset validation, database implementation, machine learning development, inference, deployment thinking, and lessons learned." />
+    <meta name="theme-color" content="#102f4d" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=20260624-1" />
+    <script src="/main.js?v=20260624-1" defer></script>
+  </head>
+  <body class="article-page" data-base="." data-nav-current="blog">
+    <div class="reading-progress"><span data-reading-progress></span></div>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Muhammad Ali Nazir Home">
+          <span class="brand-mark"><img src="/assets/profile-avatar.jpg" alt="Portrait of Muhammad Ali Nazir" /></span>
+          <span class="brand-copy"><strong>Ali Nazir</strong><small>Engineering Journal</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation" data-menu-button><span></span><span></span></button>
+        <nav class="site-nav" data-nav-links>
+          <a href="/" data-nav-key="home">Home</a>
+          <a href="/blog/" data-nav-key="blog">Blog</a>
+          <a href="/about/" data-nav-key="about">About</a>
+          <a href="/contact/" data-nav-key="contact">Contact</a>
+        </nav>
+      </header>
+      <main class="article-main">
+        <section class="article-hero" data-reveal>
+          <div class="article-intro">
+            <a class="back-link" href="/blog/">Back to Blog</a>
+            <p class="eyebrow">Blog 10</p>
+            <h1>Complete Journey: From Data to Production in My Heart Failure Prediction System</h1>
+            <p class="article-summary">A complete semester reflection on dataset validation, database implementation, machine learning development, inference, deployment thinking, and lessons learned.</p>
+            <div class="article-meta">
+              <span>June 19, 2026</span>
+              <span>13 min read</span>
+              <span>Journey Summary</span>
+            </div>
+          </div>
+          <div class="article-cover-stack">
+            <img class="article-cover-image" src="/assets/photos/heart-failure-gui.png" alt="Heart Failure Prediction System interface for entering patient clinical data." />
+            <div class="article-cover-note">
+              <span class="card-kicker">Core Message</span>
+              <p>This project taught me that a complete system is built through connected stages, not isolated assignments.</p>
+            </div>
+          </div>
+        </section>
+        <section class="article-layout">
+          <aside class="article-side" data-reveal>
+            <div class="side-card">
+              <span class="card-kicker">On This Page</span>
+              <nav class="article-toc">
+                <a href="#dataset-selection-and-validation">Dataset Selection and Validation</a>
+                <a href="#database-design-and-implementation">Database Design and Implementation</a>
+                <a href="#machine-learning-development">Machine Learning Development</a>
+                <a href="#deployment-thinking-and-future-improvements">Deployment Thinking and Future Improvements</a>
+                <a href="#portfolio-reflection">Portfolio Reflection</a>
+              </nav>
+            </div>
+            <div class="side-card">
+              <span class="card-kicker">Core Themes</span>
+              <div class="tag-cloud"><span class="tag">End-to-end pipeline</span><span class="tag">Lessons learned</span><span class="tag">Future work</span></div>
+            </div>
+          </aside>
+          <article class="article-content" data-reveal>
+
+            <section class="article-block" id="dataset-selection-and-validation">
+              <h2>Dataset Selection and Validation</h2>
+              
+              <p class="lead">The complete journey of my heart failure prediction system began with dataset selection. I searched for a dataset that was authentic, structured, and connected to a real-world problem. After comparing options, I selected the Kaggle heart failure prediction dataset because it had clear features, a target variable, and relevance to both database design and machine learning.</p>
+              <p>This first stage taught me that a project is only as strong as its data. If the dataset is unreliable, then the database, model, and deployment all inherit that weakness. That is why I checked the dataset source, structure, documentation, and feature meaning before moving forward. The selected dataset gave me 12 attributes that could support a meaningful prediction workflow.</p>
+              <p>The topic also matched the type of work Dr. Bilal Ahmad encourages: using AI and ML for problems that have real-world value. His guidance in Database Systems and Programming Fundamentals helped me see that technical learning becomes stronger when it is connected to meaningful data.</p>
+            </section>
+
+            <section class="article-block" id="database-design-and-implementation">
+              <h2>Database Design and Implementation</h2>
+              
+              <figure class="article-figure">
+                <img src="/assets/photos/heart-failure-gui.png" alt="Heart Failure Prediction System interface for entering patient clinical data." />
+                <figcaption>This project taught me that a complete system is built through connected stages, not isolated assignments.</figcaption>
+              </figure>
+              <p>After selecting the dataset, I moved into database design. I created an unnormalized table first, then identified entities and designed a normalized relational database. The main entities were Patient, Clinical Details, ECG Details, Diagnosis, and Risk Assessment. PatientID connected the tables and preserved the relationships between records.</p>
+              <p>I used MySQL Workbench to create the database, define tables, insert records, apply normalization, and generate an ER diagram through reverse engineering. This helped me visualize the system and confirm that the relational schema was properly organized. The database phase taught me the importance of structure before analysis.</p>
+              <p>Normalization into 1NF, 2NF, and 3NF reduced redundancy and improved data integrity. This made the project more professional and easier to maintain. It also prepared the data for the machine learning phase by making the structure cleaner and more trustworthy.</p>
+            </section>
+
+            <section class="article-block" id="machine-learning-development">
+              <h2>Machine Learning Development</h2>
+              
+              <p>The machine learning phase began after exporting the data into CSV format. I created a Python virtual environment, imported libraries, loaded the dataset with Pandas, performed visualization, checked missing values, encoded categorical features, and split the data into training and testing sets.</p>
+              <p>I trained models and found that Random Forest performed best among the tested options. I evaluated the model using predictions and a confusion matrix, which helped me understand correct and incorrect classifications. This phase taught me that model training is not just about running an algorithm. It requires preparation, testing, interpretation, and saving the result for later use.</p>
+              <p>I saved the trained model using Joblib and then created an inference script. The script loaded the model, accepted user input, and predicted whether heart disease was present or absent. This made the project feel practical because it moved beyond training and showed how the model could be used on unseen data.</p>
+            </section>
+
+            <section class="article-block" id="deployment-thinking-and-future-improvements">
+              <h2>Deployment Thinking and Future Improvements</h2>
+              
+              <p>The final direction of the project is deployment. FastAPI can be used to turn the saved model and inference logic into prediction endpoints. A user or another system could submit patient features and receive a result. With database integration, the API could also store prediction logs or retrieve patient records from MySQL.</p>
+              <p>Future improvements could include better preprocessing pipelines, stronger validation, probability outputs, a frontend interface, API documentation, and monitoring. If the system were ever used in a serious medical context, it would require expert review, privacy protection, and clinical validation. As a student project, its value is in learning the end-to-end engineering pipeline.</p>
+              <p>This portfolio blog series is also part of the project outcome. It leaves a digital footprint of my semester journey and shows how I moved from database concepts to ML implementation and deployment thinking. For readers who want to know more about my professor's research profile, Dr. Bilal Ahmad's work can be explored through his <a href="https://scholar.google.com.au/citations?user=8nZ0jVkAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar profile</a>, and his professional profile is available on <a href="https://www.linkedin.com/in/drbilalphd/" target="_blank" rel="noopener">LinkedIn</a>. This journey has made me more confident that computer engineering is not just about passing courses; it is about learning how systems are built from data to real use. #MLwithDrBilalAhmad #DrBilalAhmad #MLProject</p>
+            </section>
+
+            <section class="article-block" id="portfolio-reflection">
+              <h2>Portfolio Reflection and Digital Footprint</h2>
+              <p>One reason I am writing this post in detail is that a portfolio should show more than final screenshots. It should show the thinking process behind a student project. When someone visits my GitHub portfolio, I want them to see how I moved from a rough idea to a structured technical journey. This is also why the blog format is useful. It lets me explain the choices, the confusion, the corrections, and the small moments where a concept finally started making sense.</p>
+              <p>Dr. Bilal Ahmad suggested this practice as part of our growth as computer engineering students, and I now understand the advantage more clearly. A digital footprint can help future teachers, classmates, recruiters, and even my own future self see evidence of learning. It is easy to say that I studied Database Systems or worked on machine learning, but it is stronger to document the actual steps, tools, and lessons. That record makes the learning visible.</p>
+              <p>I also tried to keep this writing connected with the real project instead of making it sound like a general internet article. The Heart Failure Prediction System gave me a meaningful base because it joined database design, data quality, machine learning, and deployment thinking. Readers can also explore <a href="https://www.linkedin.com/in/drbilalphd/" target="_blank" rel="noopener">Dr. Bilal Ahmad on LinkedIn</a> to understand the academic and professional background behind the guidance that shaped this work.</p>
+            </section>
+            <section class="article-block closing-card" id="closing-thought">
+              <span class="card-kicker">Closing Thought</span>
+              <h2>This post is one part of my Database to ML portfolio journey.</h2>
+              <p>Writing it helped me convert coursework into a visible record of learning, reflection, and technical growth.</p>
+              <a class="button button-primary" href="/blog/">Return to Blog</a>
+            </section>
+          </article>
+        </section>
+      </main>
+      <footer class="site-footer"><p><span data-current-year></span> Muhammad Ali Nazir. Database, machine learning, and engineering growth.</p></footer>
+    </div>
+  </body>
+</html>

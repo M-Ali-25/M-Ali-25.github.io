@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Training an ML Model for Real-World Use: My Heart Disease Prediction Workflow | Ali Nazir</title>
+    <meta name="description" content="A first-hand account of preparing data, visualizing patterns, encoding features, training models, evaluating results, and saving the best model." />
+    <meta name="theme-color" content="#102f4d" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=20260624-1" />
+    <script src="/main.js?v=20260624-1" defer></script>
+  </head>
+  <body class="article-page" data-base="." data-nav-current="blog">
+    <div class="reading-progress"><span data-reading-progress></span></div>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Muhammad Ali Nazir Home">
+          <span class="brand-mark"><img src="/assets/profile-avatar.jpg" alt="Portrait of Muhammad Ali Nazir" /></span>
+          <span class="brand-copy"><strong>Ali Nazir</strong><small>Engineering Journal</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation" data-menu-button><span></span><span></span></button>
+        <nav class="site-nav" data-nav-links>
+          <a href="/" data-nav-key="home">Home</a>
+          <a href="/blog/" data-nav-key="blog">Blog</a>
+          <a href="/about/" data-nav-key="about">About</a>
+          <a href="/contact/" data-nav-key="contact">Contact</a>
+        </nav>
+      </header>
+      <main class="article-main">
+        <section class="article-hero" data-reveal>
+          <div class="article-intro">
+            <a class="back-link" href="/blog/">Back to Blog</a>
+            <p class="eyebrow">Blog 8</p>
+            <h1>Training an ML Model for Real-World Use: My Heart Disease Prediction Workflow</h1>
+            <p class="article-summary">A first-hand account of preparing data, visualizing patterns, encoding features, training models, evaluating results, and saving the best model.</p>
+            <div class="article-meta">
+              <span>June 15, 2026</span>
+              <span>13 min read</span>
+              <span>Machine Learning</span>
+            </div>
+          </div>
+          <div class="article-cover-stack">
+            <img class="article-cover-image" src="/assets/project-report/heart-failure-project-14.png" alt="Screenshot of machine learning code or output from the project report." />
+            <div class="article-cover-note">
+              <span class="card-kicker">Core Message</span>
+              <p>Machine learning became clearer when I saw it as a workflow, not a single command that magically predicts.</p>
+            </div>
+          </div>
+        </section>
+        <section class="article-layout">
+          <aside class="article-side" data-reveal>
+            <div class="side-card">
+              <span class="card-kicker">On This Page</span>
+              <nav class="article-toc">
+                <a href="#setting-up-the-ml-environment">Setting Up the ML Environment</a>
+                <a href="#data-preparation-and-eda">Data Preparation and EDA</a>
+                <a href="#feature-engineering-and-encoding">Feature Engineering and Encoding</a>
+                <a href="#model-training-evaluation-and-saving">Model Training, Evaluation, and Saving</a>
+                <a href="#portfolio-reflection">Portfolio Reflection</a>
+              </nav>
+            </div>
+            <div class="side-card">
+              <span class="card-kicker">Core Themes</span>
+              <div class="tag-cloud"><span class="tag">EDA</span><span class="tag">Random Forest</span><span class="tag">Evaluation</span></div>
+            </div>
+          </aside>
+          <article class="article-content" data-reveal>
+
+            <section class="article-block" id="setting-up-the-ml-environment">
+              <h2>Setting Up the ML Environment</h2>
+              
+              <p class="lead">The machine learning phase began after the database work was complete and the data was exported into CSV format. I created a Python virtual environment to keep the project dependencies separate. This felt like a small step at first, but it taught me professional project discipline. A virtual environment prevents library conflicts and makes the project easier to manage.</p>
+              <p>After activating the environment, I imported the required libraries. Pandas helped me load and manage the dataset in DataFrame form. NumPy supported numerical operations. Matplotlib and Seaborn helped with data visualization. Scikit-learn provided preprocessing, train-test split, model training, and evaluation tools. Joblib allowed me to save the trained model.</p>
+              <p>This stage connected with what Dr. Bilal Ahmad encourages in AI and ML learning: build the whole pipeline, not just one exciting part. A model is only one stage. The environment, data loading, preprocessing, visualization, evaluation, and saving process all matter if the project is going to be useful.</p>
+            </section>
+
+            <section class="article-block" id="data-preparation-and-eda">
+              <h2>Data Preparation and EDA</h2>
+              
+              <figure class="article-figure">
+                <img src="/assets/project-report/heart-failure-project-14.png" alt="Screenshot of machine learning code or output from the project report." />
+                <figcaption>Machine learning became clearer when I saw it as a workflow, not a single command that magically predicts.</figcaption>
+              </figure>
+              <p>I loaded the CSV file using Pandas and checked the first few rows with head. I also used info to understand data types and missing values. This was important because machine learning models depend on structured input. If the data is loaded incorrectly, everything after that becomes unreliable.</p>
+              <p>Then I performed exploratory data analysis. I visualized the age distribution to understand which patient age groups were represented in the dataset. I also visualized the distribution of patients with and without heart disease. These plots helped me see patterns before training the model.</p>
+              <p>EDA made the dataset more familiar. Instead of treating the data as a black box, I started recognizing its behavior. I could see how patient features were distributed and how the target variable appeared. That understanding gave more confidence before training the model.</p>
+            </section>
+
+            <section class="article-block" id="feature-engineering-and-encoding">
+              <h2>Feature Engineering and Encoding</h2>
+              
+              <p>The dataset contained categorical features such as Sex, ChestPainType, RestingECG, ExerciseAngina, and ST_Slope. Since machine learning models cannot directly process text categories, I used Label Encoding to convert them into numerical form. This step was necessary for training.</p>
+              <p>I also checked missing values and found that the dataset did not contain missing entries requiring treatment. Still, the checking process was important. In real projects, missing values can affect model performance and must be handled carefully through removal, filling, or domain-specific decisions.</p>
+              <p>Feature engineering had already started during the database phase when I created categories and risk-related fields. This showed me that machine learning preparation does not begin only in Python. It begins earlier, when data is understood and structured properly.</p>
+            </section>
+
+            <section class="article-block" id="model-training-evaluation-and-saving">
+              <h2>Model Training, Evaluation, and Saving</h2>
+              
+              <p>After preprocessing, I split the dataset into training and testing sets. The training data allowed the model to learn patterns, while the test data helped evaluate performance on unseen examples. This step is important because a model that performs well only on training data may not generalize.</p>
+              <p>I trained machine learning models and found that the Random Forest model performed best among the tested models. The model learned relationships between patient features and the HeartDisease target variable. After training, I used predictions on the test set and evaluated the results with a confusion matrix. The confusion matrix helped me compare actual and predicted values and understand correct and incorrect predictions.</p>
+              <p>Finally, I saved the trained model using Joblib so it could be reused without retraining. This was a satisfying moment because the project moved from experimentation toward practical use. A saved model can be loaded later in an inference script or deployed through an API. That made the work feel closer to a real system. #MLwithDrBilalAhmad #DrBilalAhmad #MLProject</p>
+            </section>
+
+            <section class="article-block" id="portfolio-reflection">
+              <h2>Portfolio Reflection and Digital Footprint</h2>
+              <p>One reason I am writing this post in detail is that a portfolio should show more than final screenshots. It should show the thinking process behind a student project. When someone visits my GitHub portfolio, I want them to see how I moved from a rough idea to a structured technical journey. This is also why the blog format is useful. It lets me explain the choices, the confusion, the corrections, and the small moments where a concept finally started making sense.</p>
+              <p>Dr. Bilal Ahmad suggested this practice as part of our growth as computer engineering students, and I now understand the advantage more clearly. A digital footprint can help future teachers, classmates, recruiters, and even my own future self see evidence of learning. It is easy to say that I studied Database Systems or worked on machine learning, but it is stronger to document the actual steps, tools, and lessons. That record makes the learning visible.</p>
+              <p>I also tried to keep this writing connected with the real project instead of making it sound like a general internet article. The Heart Failure Prediction System gave me a meaningful base because it joined database design, data quality, machine learning, and deployment thinking. Readers can also explore <a href="https://scholar.google.com.au/citations?user=8nZ0jVkAAAAJ&hl=en" target="_blank" rel="noopener">Dr. Bilal Ahmad's Google Scholar profile</a> to understand the academic and professional background behind the guidance that shaped this work.</p>
+            </section>
+            <section class="article-block closing-card" id="closing-thought">
+              <span class="card-kicker">Closing Thought</span>
+              <h2>This post is one part of my Database to ML portfolio journey.</h2>
+              <p>Writing it helped me convert coursework into a visible record of learning, reflection, and technical growth.</p>
+              <a class="button button-primary" href="/blog/">Return to Blog</a>
+            </section>
+          </article>
+        </section>
+      </main>
+      <footer class="site-footer"><p><span data-current-year></span> Muhammad Ali Nazir. Database, machine learning, and engineering growth.</p></footer>
+    </div>
+  </body>
+</html>

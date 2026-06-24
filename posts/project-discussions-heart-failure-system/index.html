@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Discussions: What I Built, Why It Mattered, and How I Planned It | Ali Nazir</title>
+    <meta name="description" content="A first-person discussion of the project problem statement, objectives, solution design, implementation strategy, and expected outcomes." />
+    <meta name="theme-color" content="#102f4d" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css?v=20260624-1" />
+    <script src="/main.js?v=20260624-1" defer></script>
+  </head>
+  <body class="article-page" data-base="." data-nav-current="blog">
+    <div class="reading-progress"><span data-reading-progress></span></div>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Muhammad Ali Nazir Home">
+          <span class="brand-mark"><img src="/assets/profile-avatar.jpg" alt="Portrait of Muhammad Ali Nazir" /></span>
+          <span class="brand-copy"><strong>Ali Nazir</strong><small>Engineering Journal</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation" data-menu-button><span></span><span></span></button>
+        <nav class="site-nav" data-nav-links>
+          <a href="/" data-nav-key="home">Home</a>
+          <a href="/blog/" data-nav-key="blog">Blog</a>
+          <a href="/about/" data-nav-key="about">About</a>
+          <a href="/contact/" data-nav-key="contact">Contact</a>
+        </nav>
+      </header>
+      <main class="article-main">
+        <section class="article-hero" data-reveal>
+          <div class="article-intro">
+            <a class="back-link" href="/blog/">Back to Blog</a>
+            <p class="eyebrow">Blog 5</p>
+            <h1>Project Discussions: What I Built, Why It Mattered, and How I Planned It</h1>
+            <p class="article-summary">A first-person discussion of the project problem statement, objectives, solution design, implementation strategy, and expected outcomes.</p>
+            <div class="article-meta">
+              <span>June 9, 2026</span>
+              <span>12 min read</span>
+              <span>Project Planning</span>
+            </div>
+          </div>
+          <div class="article-cover-stack">
+            <img class="article-cover-image" src="/assets/photos/database-systems-exhibition.jpeg" alt="Muhammad Ali Nazir presenting beside the Database Systems Exhibition banner." />
+            <div class="article-cover-note">
+              <span class="card-kicker">Core Message</span>
+              <p>The project became meaningful when I could explain the what, why, and how behind the technical work.</p>
+            </div>
+          </div>
+        </section>
+        <section class="article-layout">
+          <aside class="article-side" data-reveal>
+            <div class="side-card">
+              <span class="card-kicker">On This Page</span>
+              <nav class="article-toc">
+                <a href="#problem-statement">Problem Statement</a>
+                <a href="#project-objectives">Project Objectives</a>
+                <a href="#solution-design">Solution Design</a>
+                <a href="#implementation-strategy-and-expected-outcomes">Implementation Strategy and Expected Outcomes</a>
+                <a href="#portfolio-reflection">Portfolio Reflection</a>
+              </nav>
+            </div>
+            <div class="side-card">
+              <span class="card-kicker">Core Themes</span>
+              <div class="tag-cloud"><span class="tag">Problem statement</span><span class="tag">Objectives</span><span class="tag">Implementation</span></div>
+            </div>
+          </aside>
+          <article class="article-content" data-reveal>
+
+            <section class="article-block" id="problem-statement">
+              <h2>Problem Statement</h2>
+              
+              <p class="lead">The problem behind my project was to build a system that could predict the presence of heart disease using patient health parameters. The project combined database design and machine learning, which made it more complete than a simple coding exercise. It started from a real-world dataset, moved into database structure, and then continued toward model training and prediction.</p>
+              <p>The heart failure prediction topic was important because it connected computer engineering with a medical problem. Even though my system was academic and not a clinical tool, the direction was meaningful. It showed how data can support decision-making when handled responsibly. This is the kind of real-world connection that Dr. Bilal Ahmad often encouraged in our coursework, especially because he has strong expertise in AI, ML, and DL model training.</p>
+              <p>My selected dataset came from Kaggle, specifically the heart failure prediction dataset. I chose it after checking documentation, structure, and relevance. The dataset contained patient features and a target variable, making it suitable for classification. This gave the project a clear technical direction: prepare the data, design the database, train a model, and test predictions.</p>
+            </section>
+
+            <section class="article-block" id="project-objectives">
+              <h2>Project Objectives</h2>
+              
+              <figure class="article-figure">
+                <img src="/assets/photos/database-systems-exhibition.jpeg" alt="Muhammad Ali Nazir presenting beside the Database Systems Exhibition banner." />
+                <figcaption>The project became meaningful when I could explain the what, why, and how behind the technical work.</figcaption>
+              </figure>
+              <p>The first objective was to identify and select an authentic real-world heart failure dataset from a credible source. The second objective was to analyze the dataset structure and understand the meaning of each feature. The third objective was to design a normalized relational database using MySQL Workbench with proper entity identification, table creation, and data insertion.</p>
+              <p>Another objective was to generate an ER diagram through reverse engineering and export the data into CSV format for use in Python. This step created a bridge between database management and machine learning. After that, the project objective shifted toward building a complete ML pipeline, including preprocessing, visualization, encoding, train-test split, model training, prediction, and evaluation.</p>
+              <p>The final objective was to save the trained model and use it for real-time prediction through an inference script. In my future extension, this same idea can be taken toward FastAPI deployment, where prediction endpoints would allow a user interface or another application to send patient input and receive a result.</p>
+            </section>
+
+            <section class="article-block" id="solution-design">
+              <h2>Solution Design</h2>
+              
+              <p>The solution design had two main sides. The first side was the database system. I created the database in MySQL Workbench, designed an unnormalized table, added meaningful extra features, divided the data into related tables, inserted records, and applied normalization. This created a clean structure for the heart failure dataset.</p>
+              <p>The second side was the machine learning system. After exporting the data into CSV format, I used Python libraries such as Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, and Joblib. Pandas helped with data loading and table handling. Matplotlib and Seaborn helped with visualization. Scikit-learn helped with preprocessing, train-test split, model training, and evaluation. Joblib helped save the model for later use.</p>
+              <p>This design made the project feel like a pipeline. The database side organized the data, and the ML side learned from it. That pipeline thinking is important because real-world systems rarely depend on one tool only. They depend on the connection between tools.</p>
+            </section>
+
+            <section class="article-block" id="implementation-strategy-and-expected-outcomes">
+              <h2>Implementation Strategy and Expected Outcomes</h2>
+              
+              <p>My implementation strategy was step-by-step. First, I selected and studied the dataset. Then I designed the database and implemented it in MySQL Workbench. After that, I exported the processed data and moved into Python for machine learning. I performed visualization, checked missing values, encoded categorical features, split the dataset, trained models, evaluated performance, and saved the best trained model.</p>
+              <p>The expected outcome was a working heart failure prediction system that could take patient information and predict whether heart disease was likely. The inference script completed that practical demonstration by loading the saved model, taking user input, and printing a result such as Heart Disease: YES or Heart Disease: NO.</p>
+              <p>This project discussion helped me understand that every good technical project needs a clear story. What is the problem? Why does it matter? How will it be solved? What should the output prove? Presenting this work during the Database Systems Exhibition made that story more real for me because I had to stand beside the project and explain the effort behind it. Writing this blog is also part of that story because it leaves a digital footprint of my learning process as a computer engineering student. #MLwithDrBilalAhmad #DrBilalAhmad #MLProject</p>
+            </section>
+
+            <section class="article-block" id="portfolio-reflection">
+              <h2>Portfolio Reflection and Digital Footprint</h2>
+              <p>One reason I am writing this post in detail is that a portfolio should show more than final screenshots. It should show the thinking process behind a student project. When someone visits my GitHub portfolio, I want them to see how I moved from a rough idea to a structured technical journey. This is also why the blog format is useful. It lets me explain the choices, the confusion, the corrections, and the small moments where a concept finally started making sense.</p>
+              <p>Dr. Bilal Ahmad suggested this practice as part of our growth as computer engineering students, and I now understand the advantage more clearly. A digital footprint can help future teachers, classmates, recruiters, and even my own future self see evidence of learning. It is easy to say that I studied Database Systems or worked on machine learning, but it is stronger to document the actual steps, tools, and lessons. That record makes the learning visible.</p>
+              <p>I also tried to keep this writing connected with the real project instead of making it sound like a general internet article. The Heart Failure Prediction System gave me a meaningful base because it joined database design, data quality, machine learning, and deployment thinking. Readers can also explore <a href="https://scholar.google.com.au/citations?user=8nZ0jVkAAAAJ&hl=en" target="_blank" rel="noopener">Dr. Bilal Ahmad's Google Scholar profile</a> to understand the academic and professional background behind the guidance that shaped this work.</p>
+            </section>
+            <section class="article-block closing-card" id="closing-thought">
+              <span class="card-kicker">Closing Thought</span>
+              <h2>This post is one part of my Database to ML portfolio journey.</h2>
+              <p>Writing it helped me convert coursework into a visible record of learning, reflection, and technical growth.</p>
+              <a class="button button-primary" href="/blog/">Return to Blog</a>
+            </section>
+          </article>
+        </section>
+      </main>
+      <footer class="site-footer"><p><span data-current-year></span> Muhammad Ali Nazir. Database, machine learning, and engineering growth.</p></footer>
+    </div>
+  </body>
+</html>
