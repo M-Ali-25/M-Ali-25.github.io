@@ -613,13 +613,18 @@ function professorLinksBlock() {
               </div>`;
 }
 
+function linkProfessorName(text) {
+  const links = `Dr. Bilal Ahmad <span class="professor-inline-links">(<a href="${professorLinks.linkedin}" target="_blank" rel="noopener">LinkedIn</a> | <a href="${professorLinks.scholar}" target="_blank" rel="noopener">Google Scholar</a> | <a href="${professorLinks.facebook}" target="_blank" rel="noopener">Facebook</a>)</span>`;
+  return text.replace(/\bDr\. Bilal Ahmad\b/g, links);
+}
+
 function renderPortfolioReflection(post) {
   return html`
             <section class="article-block" id="portfolio-reflection">
               <h2>Portfolio Reflection and Digital Footprint</h2>
-              <p>One reason I am writing this post in detail is that a portfolio should show more than final screenshots. It should show the thinking process behind a student project. When someone visits my GitHub portfolio, I want them to see how I moved from a rough idea to a structured technical journey. This is also why the blog format is useful. It lets me explain the choices, the confusion, the corrections, and the small moments where a concept finally started making sense.</p>
-              <p>Dr. Bilal Ahmad suggested this practice as part of our growth as computer engineering students, and I now understand the advantage more clearly. A digital footprint can help future teachers, classmates, recruiters, and even my own future self see evidence of learning. It is easy to say that I studied Database Systems or worked on machine learning, but it is stronger to document the actual steps, tools, and lessons. That record makes the learning visible.</p>
-              <p>I also tried to keep this writing connected with my real semester experience instead of making it sound like a general internet article. The full portfolio gives me a meaningful base because it joins personal adjustment, Programming Fundamentals, Database Systems, machine learning, and project thinking. Readers can also explore ${professorProfileLink(post.number)} to understand the academic and professional background behind the guidance that shaped this work.</p>
+              <p>${linkProfessorName("One reason I am writing this post in detail is that a portfolio should show more than final screenshots. It should show the thinking process behind a student project. When someone visits my GitHub portfolio, I want them to see how I moved from a rough idea to a structured technical journey. This is also why the blog format is useful. It lets me explain the choices, the confusion, the corrections, and the small moments where a concept finally started making sense.")}</p>
+              <p>${linkProfessorName("Dr. Bilal Ahmad suggested this practice as part of our growth as computer engineering students, and I now understand the advantage more clearly. A digital footprint can help future teachers, classmates, recruiters, and even my own future self see evidence of learning. It is easy to say that I studied Database Systems or worked on machine learning, but it is stronger to document the actual steps, tools, and lessons. That record makes the learning visible.")}</p>
+              <p>${linkProfessorName(`I also tried to keep this writing connected with my real semester experience instead of making it sound like a general internet article. The full portfolio gives me a meaningful base because it joins personal adjustment, Programming Fundamentals, Database Systems, machine learning, and project thinking. Readers can also explore ${professorProfileLink(post.number)} to understand the academic and professional background behind the guidance that shaped this work.`)}</p>
 ${professorLinksBlock()}
             </section>`;
 }
@@ -644,7 +649,7 @@ function renderArticle(post) {
               <h2>${title}</h2>
               ${figure}
               ${paragraphs
-                .map((p, pIndex) => `<p${index === 0 && pIndex === 0 ? ' class="lead"' : ""}>${p}</p>`)
+                .map((p, pIndex) => `<p${index === 0 && pIndex === 0 ? ' class="lead"' : ""}>${linkProfessorName(p)}</p>`)
                 .join("\n              ")}
             </section>`;
     })

@@ -1732,6 +1732,20 @@ ol {
   line-height: 1.95;
 }
 
+.article-content a {
+  color: var(--accent-deep);
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.professor-inline-links {
+  color: var(--muted);
+  font-size: 0.9em;
+  white-space: normal;
+}
+
 .article-content h2 {
   margin-bottom: 0.9rem;
   font-size: clamp(1.55rem, 3vw, 2.2rem);
