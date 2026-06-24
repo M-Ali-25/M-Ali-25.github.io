@@ -603,6 +603,16 @@ function professorProfileLink(postNumber) {
   return `<a href="${professorLinks.facebook}" target="_blank" rel="noopener">Dr. Bilal Ahmad's Facebook page</a>`;
 }
 
+function professorLinksBlock() {
+  return html`
+              <div class="callout">
+                <strong>Professor profile links:</strong>
+                <a href="${professorLinks.linkedin}" target="_blank" rel="noopener">LinkedIn</a>,
+                <a href="${professorLinks.scholar}" target="_blank" rel="noopener">Google Scholar</a>,
+                and <a href="${professorLinks.facebook}" target="_blank" rel="noopener">Facebook</a>.
+              </div>`;
+}
+
 function renderPortfolioReflection(post) {
   return html`
             <section class="article-block" id="portfolio-reflection">
@@ -610,6 +620,7 @@ function renderPortfolioReflection(post) {
               <p>One reason I am writing this post in detail is that a portfolio should show more than final screenshots. It should show the thinking process behind a student project. When someone visits my GitHub portfolio, I want them to see how I moved from a rough idea to a structured technical journey. This is also why the blog format is useful. It lets me explain the choices, the confusion, the corrections, and the small moments where a concept finally started making sense.</p>
               <p>Dr. Bilal Ahmad suggested this practice as part of our growth as computer engineering students, and I now understand the advantage more clearly. A digital footprint can help future teachers, classmates, recruiters, and even my own future self see evidence of learning. It is easy to say that I studied Database Systems or worked on machine learning, but it is stronger to document the actual steps, tools, and lessons. That record makes the learning visible.</p>
               <p>I also tried to keep this writing connected with my real semester experience instead of making it sound like a general internet article. The full portfolio gives me a meaningful base because it joins personal adjustment, Programming Fundamentals, Database Systems, machine learning, and project thinking. Readers can also explore ${professorProfileLink(post.number)} to understand the academic and professional background behind the guidance that shaped this work.</p>
+${professorLinksBlock()}
             </section>`;
 }
 
