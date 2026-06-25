@@ -1,7 +1,7 @@
 const posts = [
   {
     number: 1,
-    title: "From MDCAT Dreams to Engineering Reality",
+    title: "Why I Chose Computer Engineering",
     href: "/posts/mdcat-dreams-to-engineering-reality/",
     label: "Blog 1",
     dateLabel: "March 21, 2026",
@@ -14,7 +14,7 @@ const posts = [
   },
   {
     number: 2,
-    title: "A Late Start: When First Semester Was Already Half Gone",
+    title: "Starting First Semester Late",
     href: "/posts/a-late-start-when-first-semester-was-already-half-gone/",
     label: "Blog 2",
     dateLabel: "March 28, 2026",
@@ -27,7 +27,7 @@ const posts = [
   },
   {
     number: 3,
-    title: "Walking into Programming Fundamentals with Zero Background",
+    title: "Learning Programming from Zero",
     href: "/posts/walking-into-programming-fundamentals-with-zero-background/",
     label: "Blog 3",
     dateLabel: "April 4, 2026",
@@ -40,7 +40,7 @@ const posts = [
   },
   {
     number: 4,
-    title: "Learning Under Pressure: Nights of Self-Study",
+    title: "Studying at Night and Catching Up",
     href: "/posts/learning-under-pressure-nights-of-self-study/",
     label: "Blog 4",
     dateLabel: "April 11, 2026",
@@ -53,7 +53,7 @@ const posts = [
   },
   {
     number: 5,
-    title: "My First Achievement: Machine Learning Project",
+    title: "My First Machine Learning Project",
     href: "/posts/my-first-achievement-machine-learning-project/",
     label: "Blog 5",
     dateLabel: "April 18, 2026",
@@ -66,7 +66,7 @@ const posts = [
   },
   {
     number: 6,
-    title: "Introduction to Databases: Where My Heart Failure Prediction Project Began",
+    title: "How My Database Project Started",
     href: "/posts/introduction-to-databases-heart-failure-project/",
     label: "Blog 6",
     dateLabel: "June 1, 2026",
@@ -79,7 +79,7 @@ const posts = [
   },
   {
     number: 7,
-    title: "Understanding the Actual Purpose of Databases in a Medical Prediction System",
+    title: "Why Databases Matter in My Project",
     href: "/posts/actual-purpose-of-databases-medical-prediction/",
     label: "Blog 7",
     dateLabel: "June 3, 2026",
@@ -92,7 +92,7 @@ const posts = [
   },
   {
     number: 8,
-    title: "Deep Dive into Databases: Tables, Keys, Relationships, and ACID Thinking",
+    title: "Tables, Keys, and Relationships",
     href: "/posts/deep-dive-databases-tables-keys-relationships/",
     label: "Blog 8",
     dateLabel: "June 5, 2026",
@@ -105,7 +105,7 @@ const posts = [
   },
   {
     number: 9,
-    title: "Designing the Actual Database for My Heart Failure Dataset",
+    title: "Designing My Heart Failure Database",
     href: "/posts/designing-actual-database-heart-failure-dataset/",
     label: "Blog 9",
     dateLabel: "June 7, 2026",
@@ -118,7 +118,7 @@ const posts = [
   },
   {
     number: 10,
-    title: "Project Discussions: What I Built, Why It Mattered, and How I Planned It",
+    title: "Planning My Heart Failure Project",
     href: "/posts/project-discussions-heart-failure-system/",
     label: "Blog 10",
     dateLabel: "June 9, 2026",
@@ -131,7 +131,7 @@ const posts = [
   },
   {
     number: 11,
-    title: "Real-World Dataset Selection and the Challenges I Faced",
+    title: "Choosing the Right Dataset",
     href: "/posts/real-world-dataset-selection-challenges/",
     label: "Blog 11",
     dateLabel: "June 11, 2026",
@@ -144,7 +144,7 @@ const posts = [
   },
   {
     number: 12,
-    title: "Designing a Database for the Selected Heart Failure Dataset",
+    title: "Building the Database from the Dataset",
     href: "/posts/database-for-selected-heart-failure-dataset/",
     label: "Blog 12",
     dateLabel: "June 13, 2026",
@@ -157,7 +157,7 @@ const posts = [
   },
   {
     number: 13,
-    title: "Training an ML Model for Real-World Use: My Heart Disease Prediction Workflow",
+    title: "Training My Machine Learning Model",
     href: "/posts/training-ml-model-real-world-heart-disease/",
     label: "Blog 13",
     dateLabel: "June 15, 2026",
@@ -170,7 +170,7 @@ const posts = [
   },
   {
     number: 14,
-    title: "Deploying the Model Using FastAPI: Turning Predictions into a Usable Service",
+    title: "Making the Model Usable with FastAPI",
     href: "/posts/deploying-model-using-fastapi-heart-disease/",
     label: "Blog 14",
     dateLabel: "June 17, 2026",
@@ -183,7 +183,7 @@ const posts = [
   },
   {
     number: 15,
-    title: "Complete Journey: From Data to Production in My Heart Failure Prediction System",
+    title: "My Complete Project Journey",
     href: "/posts/complete-journey-data-to-production-heart-failure/",
     label: "Blog 15",
     dateLabel: "June 19, 2026",
@@ -194,6 +194,25 @@ const posts = [
     cover: "/assets/photos/heart-failure-gui.png",
     coverAlt: "Heart Failure Prediction System interface for entering patient clinical data.",
   }
+];
+
+const semesterSections = [
+  {
+    id: "first-semester",
+    title: "1st Semester Learnings and Challenges",
+    label: "Blogs 1 to 5",
+    description:
+      "My early university experience: choosing engineering, starting late, learning programming basics, catching up through self-study, and completing my first machine learning work.",
+    posts: posts.slice(0, 5),
+  },
+  {
+    id: "second-semester",
+    title: "2nd Semester Learning",
+    label: "Blogs 6 to 15",
+    description:
+      "My Database Systems and machine learning project journey: dataset selection, database design, model training, FastAPI planning, and the lessons from the full project.",
+    posts: posts.slice(5),
+  },
 ];
 
 function resolvePath(path) {
@@ -209,6 +228,44 @@ function renderPosts() {
     const limit = Number(container.dataset.postLimit || posts.length);
     const layout = container.dataset.postLayout || "grid";
     const selected = posts.slice(0, limit);
+
+    if (layout === "semester") {
+      container.innerHTML = semesterSections
+        .map((section) => {
+          const sectionPosts = section.posts.slice(0, limit);
+          const cards = sectionPosts
+            .map(
+              (post) => `
+              <li class="blog-minimal-item" data-reveal>
+                <a class="blog-minimal-link" href="${resolvePath(post.href)}" aria-label="Read ${post.title}">
+                  <span class="blog-minimal-number">Blog ${post.number}</span>
+                  <span class="blog-minimal-title">${post.title}</span>
+                  <span class="blog-minimal-meta">
+                    <span>${post.dateLabel}</span>
+                    <span>${post.readTime}</span>
+                  </span>
+                </a>
+              </li>
+            `
+            )
+            .join("");
+
+          return `
+            <article class="semester-block" id="${section.id}" data-reveal>
+              <div class="semester-block-head">
+                <div>
+                  <span class="semester-label">${section.label}</span>
+                  <h2>${section.title}</h2>
+                </div>
+              </div>
+              <p>${section.description}</p>
+              <ol class="blog-minimal-list">${cards}</ol>
+            </article>
+          `;
+        })
+        .join("");
+      return;
+    }
 
     container.innerHTML = selected
       .map((post) => {
