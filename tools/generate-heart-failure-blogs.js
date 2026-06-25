@@ -571,7 +571,7 @@ const posts = [
       ["Deployment Thinking and Future Improvements", [
         "The final direction of the project is deployment. FastAPI can be used to turn the saved model and inference logic into prediction endpoints. A user or another system could submit patient features and receive a result. With database integration, the API could also store prediction logs or retrieve patient records from MySQL.",
         "Future improvements could include better preprocessing pipelines, stronger validation, probability outputs, a frontend interface, API documentation, and monitoring. If the system were ever used in a serious medical context, it would require expert review, privacy protection, and clinical validation. As a student project, its value is in learning the end-to-end engineering pipeline.",
-        "This portfolio blog series is also part of the project outcome. It leaves a digital footprint of my semester journey and shows how I moved from database concepts to ML implementation and deployment thinking. For readers who want to know more about my professor's research profile, Dr. Bilal Ahmad's work can be explored through his <a href=\"" + professorLinks.scholar + "\" target=\"_blank\" rel=\"noopener\">Google Scholar profile</a>, and his professional profile is available on <a href=\"" + professorLinks.linkedin + "\" target=\"_blank\" rel=\"noopener\">LinkedIn</a>. This journey has made me more confident that computer engineering is not just about passing courses; it is about learning how systems are built from data to real use. #MLwithDrBilalAhmad #DrBilalAhmad #MLProject",
+        "This portfolio blog series is also part of the project outcome. It leaves a digital footprint of my semester journey and shows how I moved from database concepts to ML implementation and deployment thinking. For readers who want to know more about the research background behind this guidance, Dr. Bilal Ahmad's work can be explored through his <a href=\"" + professorLinks.scholar + "\" target=\"_blank\" rel=\"noopener\">Google Scholar profile</a>. This journey has made me more confident that computer engineering is not just about passing courses; it is about learning how systems are built from data to real use. #MLwithDrBilalAhmad #DrBilalAhmad #MLProject",
       ]],
     ],
   },
@@ -593,43 +593,75 @@ function sectionId(title) {
   return title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
 
-function professorProfileLink(postNumber) {
-  if (postNumber % 3 === 1) {
-    return `<a href="${professorLinks.linkedin}" target="_blank" rel="noopener">Dr. Bilal Ahmad on LinkedIn</a>`;
-  }
-  if (postNumber % 3 === 2) {
-    return `<a href="${professorLinks.scholar}" target="_blank" rel="noopener">Dr. Bilal Ahmad's Google Scholar profile</a>`;
-  }
-  return `<a href="${professorLinks.facebook}" target="_blank" rel="noopener">Dr. Bilal Ahmad's Facebook page</a>`;
+const professorLinkPlan = {
+  1: { kind: "linkedin", occurrence: 1 },
+  3: { kind: "linkedin", occurrence: 1 },
+  5: { kind: "scholar", occurrence: 1 },
+  6: { kind: "scholar", occurrence: 1 },
+  8: { kind: "scholar", occurrence: 1 },
+  10: { kind: "scholar", occurrence: 1 },
+  11: { kind: "linkedin", occurrence: 1 },
+  13: { kind: "scholar", occurrence: 1 },
+  14: { kind: "linkedin", occurrence: 1 },
+};
+
+const portfolioReflectionLinks = {
+  2: {
+    kind: "linkedin",
+    text: "Readers who want professional context behind that academic guidance can also visit Dr. Bilal Ahmad on LinkedIn.",
+    anchor: "Dr. Bilal Ahmad on LinkedIn",
+  },
+  7: {
+    kind: "facebook",
+    text: "I also kept one social profile reference here because this reflection is about learning publicly and building a visible student footprint.",
+    anchor: "social profile reference",
+  },
+  12: {
+    kind: "scholar",
+    text: "For the research side of AI and ML guidance, Dr. Bilal Ahmad's Google Scholar profile gives useful academic context.",
+    anchor: "Dr. Bilal Ahmad's Google Scholar profile",
+  },
+};
+
+function singleProfessorLink(kind, label) {
+  return `<a href="${professorLinks[kind]}" target="_blank" rel="noopener">${label}</a>`;
 }
 
-function professorLinksBlock() {
+function applyProfessorLink(text, post, state) {
+  const plan = professorLinkPlan[post.number];
+  if (!plan || !text.includes("Dr. Bilal Ahmad")) {
+    return text;
+  }
+  state.professorMentions += (text.match(/\bDr\. Bilal Ahmad\b/g) || []).length;
+  if (state.professorMentions < plan.occurrence || state.professorLinked) {
+    return text;
+  }
+  state.professorLinked = true;
+  return text.replace(/\bDr\. Bilal Ahmad\b/, singleProfessorLink(plan.kind, "Dr. Bilal Ahmad"));
+}
+
+function renderOptionalReflectionLink(post) {
+  const entry = portfolioReflectionLinks[post.number];
+  if (!entry) {
+    return "";
+  }
   return html`
-              <div class="callout">
-                <strong>Professor profile links:</strong>
-                <a href="${professorLinks.linkedin}" target="_blank" rel="noopener">LinkedIn</a>,
-                <a href="${professorLinks.scholar}" target="_blank" rel="noopener">Google Scholar</a>,
-                and <a href="${professorLinks.facebook}" target="_blank" rel="noopener">Facebook</a>.
-              </div>`;
-}
-
-function linkProfessorName(text) {
-  const links = `Dr. Bilal Ahmad <span class="professor-inline-links">(<a href="${professorLinks.linkedin}" target="_blank" rel="noopener">LinkedIn</a> | <a href="${professorLinks.scholar}" target="_blank" rel="noopener">Google Scholar</a> | <a href="${professorLinks.facebook}" target="_blank" rel="noopener">Facebook</a>)</span>`;
-  return text.replace(/\bDr\. Bilal Ahmad\b/g, links);
+              <p>${entry.text.replace(entry.anchor, singleProfessorLink(entry.kind, entry.anchor))}</p>`;
 }
 
 function renderPortfolioReflection(post) {
   return html`
             <section class="article-block" id="portfolio-reflection">
               <h2>Portfolio Reflection and Digital Footprint</h2>
-              <p>${linkProfessorName("One reason I am writing this post in detail is that a portfolio should show more than final screenshots. It should show the thinking process behind a student project. When someone visits my GitHub portfolio, I want them to see how I moved from a rough idea to a structured technical journey. This is also why the blog format is useful. It lets me explain the choices, the confusion, the corrections, and the small moments where a concept finally started making sense.")}</p>
-              <p>${linkProfessorName("Dr. Bilal Ahmad suggested this practice as part of our growth as computer engineering students, and I now understand the advantage more clearly. A digital footprint can help future teachers, classmates, recruiters, and even my own future self see evidence of learning. It is easy to say that I studied Database Systems or worked on machine learning, but it is stronger to document the actual steps, tools, and lessons. That record makes the learning visible.")}</p>
-              <p>${linkProfessorName(`I also tried to keep this writing connected with my real semester experience instead of making it sound like a general internet article. The full portfolio gives me a meaningful base because it joins personal adjustment, Programming Fundamentals, Database Systems, machine learning, and project thinking. Readers can also explore ${professorProfileLink(post.number)} to understand the academic and professional background behind the guidance that shaped this work.`)}</p>
-${professorLinksBlock()}
+              <p>One reason I am writing this post in detail is that a portfolio should show more than final screenshots. It should show the thinking process behind a student project. When someone visits my GitHub portfolio, I want them to see how I moved from a rough idea to a structured technical journey. This is also why the blog format is useful. It lets me explain the choices, the confusion, the corrections, and the small moments where a concept finally started making sense.</p>
+              <p>Dr. Bilal Ahmad suggested this practice as part of our growth as computer engineering students, and I now understand the advantage more clearly. A digital footprint can help future teachers, classmates, recruiters, and even my own future self see evidence of learning. It is easy to say that I studied Database Systems or worked on machine learning, but it is stronger to document the actual steps, tools, and lessons. That record makes the learning visible.</p>
+              <p>I also tried to keep this writing connected with my real semester experience instead of making it sound like a general internet article. The full portfolio gives me a meaningful base because it joins personal adjustment, Programming Fundamentals, Database Systems, machine learning, and project thinking.</p>
+${renderOptionalReflectionLink(post)}
             </section>`;
 }
 
 function renderArticle(post) {
+  const linkState = { professorMentions: 0, professorLinked: false };
   const toc = post.sections
     .map(([title]) => `<a href="#${sectionId(title)}">${title}</a>`)
     .concat('<a href="#portfolio-reflection">Portfolio Reflection</a>')
@@ -649,7 +681,7 @@ function renderArticle(post) {
               <h2>${title}</h2>
               ${figure}
               ${paragraphs
-                .map((p, pIndex) => `<p${index === 0 && pIndex === 0 ? ' class="lead"' : ""}>${linkProfessorName(p)}</p>`)
+                .map((p, pIndex) => `<p${index === 0 && pIndex === 0 ? ' class="lead"' : ""}>${applyProfessorLink(p, post, linkState)}</p>`)
                 .join("\n              ")}
             </section>`;
     })

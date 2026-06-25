@@ -1740,12 +1740,6 @@ ol {
   text-underline-offset: 0.18em;
 }
 
-.professor-inline-links {
-  color: var(--muted);
-  font-size: 0.9em;
-  white-space: normal;
-}
-
 .article-content h2 {
   margin-bottom: 0.9rem;
   font-size: clamp(1.55rem, 3vw, 2.2rem);
