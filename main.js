@@ -74,8 +74,8 @@ const posts = [
     excerpt: "My first serious view of databases came through a heart failure prediction project where data stopped feeling like rows in a file and started looking like a system.",
     highlights: ["Database basics","Digital footprint","Real-world data"],
     tags: ["Database Systems","Heart Failure Project","MLProject"],
-    cover: "/assets/project-report/heart-failure-project-02.jpeg",
-    coverAlt: "Project report screenshot showing the heart failure prediction system coursework.",
+    cover: null,
+    coverAlt: "",
   },
   {
     number: 7,
@@ -87,8 +87,8 @@ const posts = [
     excerpt: "This post reflects on why databases exist, what problems they solve, and why data integrity became serious when the dataset represented patient health factors.",
     highlights: ["Data integrity","Security","Business value"],
     tags: ["Database Purpose","Heart Failure Project","MLProject"],
-    cover: "/assets/project-report/heart-failure-project-03.jpeg",
-    coverAlt: "Screenshot from the database project showing heart failure dataset work.",
+    cover: null,
+    coverAlt: "",
   },
   {
     number: 8,
@@ -100,8 +100,8 @@ const posts = [
     excerpt: "A detailed reflection on the database concepts that became practical when I separated the heart failure dataset into related tables.",
     highlights: ["Keys","Constraints","Normalization"],
     tags: ["Relational Design","Heart Failure Project","MLProject"],
-    cover: "/assets/project-report/heart-failure-project-04.jpeg",
-    coverAlt: "Screenshot showing database design and schema work in the project report.",
+    cover: "/assets/project-report/heart-failure-project-07.jpeg",
+    coverAlt: "Entity relationship diagram screenshot showing the heart failure database tables and relationships.",
   },
   {
     number: 9,
@@ -139,8 +139,8 @@ const posts = [
     excerpt: "A reflection on finding a reliable Kaggle dataset, checking authenticity, assessing quality, and understanding ethical responsibility in medical data.",
     highlights: ["Kaggle","Data quality","Ethics"],
     tags: ["Dataset Selection","Heart Failure Project","MLProject"],
-    cover: "/assets/project-report/heart-failure-project-10.jpeg",
-    coverAlt: "Screenshot showing dataset and analysis work from the heart failure project.",
+    cover: null,
+    coverAlt: "",
   },
   {
     number: 12,
@@ -152,8 +152,8 @@ const posts = [
     excerpt: "How I moved from dataset structure to entities, ER diagram, relational schema, data loading, validation, and export for ML.",
     highlights: ["Data loading","Validation","CSV export"],
     tags: ["Implementation","Heart Failure Project","MLProject"],
-    cover: "/assets/project-report/heart-failure-project-12.jpeg",
-    coverAlt: "Screenshot of database implementation tables from the heart failure project report.",
+    cover: "/assets/project-report/heart-failure-project-09.jpeg",
+    coverAlt: "MySQL Workbench result grid showing the selected heart failure dataset records.",
   },
   {
     number: 13,
@@ -165,8 +165,8 @@ const posts = [
     excerpt: "A first-hand account of preparing data, visualizing patterns, encoding features, training models, evaluating results, and saving the best model.",
     highlights: ["EDA","Random Forest","Evaluation"],
     tags: ["Machine Learning","Heart Failure Project","MLProject"],
-    cover: "/assets/project-report/heart-failure-project-14.png",
-    coverAlt: "Screenshot of machine learning code or output from the project report.",
+    cover: "/assets/project-report/heart-failure-project-16.png",
+    coverAlt: "Confusion matrix output from the Random Forest heart disease prediction model.",
   },
   {
     number: 14,
@@ -234,9 +234,9 @@ function renderPosts() {
         if (layout === "list") {
           return `
           <article class="blog-list-entry" data-reveal>
-            <a class="blog-list-image" href="${resolvePath(post.href)}" aria-label="Read ${post.title}">
+            ${post.cover ? `<a class="blog-list-image" href="${resolvePath(post.href)}" aria-label="Read ${post.title}">
               <img src="${resolvePath(post.cover)}" alt="${post.coverAlt || `Cover image for ${post.title}`}" />
-            </a>
+            </a>` : ""}
             <div class="blog-list-body">
               <div class="blog-list-topline">
                 <span class="blog-list-label">${post.label || "Journal Entry"}</span>
@@ -261,9 +261,9 @@ function renderPosts() {
 
         return `
           <article class="post-card">
-            <a class="post-card-image" href="${resolvePath(post.href)}" aria-label="Read ${post.title}">
+            ${post.cover ? `<a class="post-card-image" href="${resolvePath(post.href)}" aria-label="Read ${post.title}">
               <img src="${resolvePath(post.cover)}" alt="${post.coverAlt || `Cover image for ${post.title}`}" />
-            </a>
+            </a>` : ""}
             <div class="post-card-body">
               <div class="post-card-meta">
                 <span>${post.label || "Journal Entry"}</span>

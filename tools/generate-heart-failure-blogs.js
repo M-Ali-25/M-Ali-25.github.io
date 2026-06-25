@@ -212,8 +212,8 @@ const posts = [
     date: "June 1, 2026",
     readTime: "11 min read",
     category: "Database Systems",
-    cover: "/assets/project-report/heart-failure-project-02.jpeg",
-    alt: "Project report screenshot showing the heart failure prediction system coursework.",
+    cover: null,
+    alt: "",
     excerpt:
       "My first serious view of databases came through a heart failure prediction project where data stopped feeling like rows in a file and started looking like a system.",
     note:
@@ -249,8 +249,8 @@ const posts = [
     date: "June 3, 2026",
     readTime: "12 min read",
     category: "Database Purpose",
-    cover: "/assets/project-report/heart-failure-project-03.jpeg",
-    alt: "Screenshot from the database project showing heart failure dataset work.",
+    cover: null,
+    alt: "",
     excerpt:
       "This post reflects on why databases exist, what problems they solve, and why data integrity became serious when the dataset represented patient health factors.",
     note:
@@ -286,8 +286,8 @@ const posts = [
     date: "June 5, 2026",
     readTime: "12 min read",
     category: "Relational Design",
-    cover: "/assets/project-report/heart-failure-project-04.jpeg",
-    alt: "Screenshot showing database design and schema work in the project report.",
+    cover: "/assets/project-report/heart-failure-project-07.jpeg",
+    alt: "Entity relationship diagram screenshot showing the heart failure database tables and relationships.",
     excerpt:
       "A detailed reflection on the database concepts that became practical when I separated the heart failure dataset into related tables.",
     note:
@@ -397,8 +397,8 @@ const posts = [
     date: "June 11, 2026",
     readTime: "12 min read",
     category: "Dataset Selection",
-    cover: "/assets/project-report/heart-failure-project-10.jpeg",
-    alt: "Screenshot showing dataset and analysis work from the heart failure project.",
+    cover: null,
+    alt: "",
     excerpt:
       "A reflection on finding a reliable Kaggle dataset, checking authenticity, assessing quality, and understanding ethical responsibility in medical data.",
     note:
@@ -434,8 +434,8 @@ const posts = [
     date: "June 13, 2026",
     readTime: "13 min read",
     category: "Implementation",
-    cover: "/assets/project-report/heart-failure-project-12.jpeg",
-    alt: "Screenshot of database implementation tables from the heart failure project report.",
+    cover: "/assets/project-report/heart-failure-project-09.jpeg",
+    alt: "MySQL Workbench result grid showing the selected heart failure dataset records.",
     excerpt:
       "How I moved from dataset structure to entities, ER diagram, relational schema, data loading, validation, and export for ML.",
     note:
@@ -471,8 +471,8 @@ const posts = [
     date: "June 15, 2026",
     readTime: "13 min read",
     category: "Machine Learning",
-    cover: "/assets/project-report/heart-failure-project-14.png",
-    alt: "Screenshot of machine learning code or output from the project report.",
+    cover: "/assets/project-report/heart-failure-project-16.png",
+    alt: "Confusion matrix output from the Random Forest heart disease prediction model.",
     excerpt:
       "A first-hand account of preparing data, visualizing patterns, encoding features, training models, evaluating results, and saving the best model.",
     note:
@@ -649,6 +649,18 @@ function renderOptionalReflectionLink(post) {
               <p>${entry.text.replace(entry.anchor, singleProfessorLink(entry.kind, entry.anchor))}</p>`;
 }
 
+function renderProfessorResources() {
+  return html`
+            <section class="article-block professor-resources" id="professor-resources">
+              <h2>Professor Resources</h2>
+              <p>For academic and professional context around the guidance behind this portfolio work, these two Dr. Bilal Ahmad profiles are useful references:</p>
+              <div class="resource-links">
+                <a href="${professorLinks.scholar}" target="_blank" rel="noopener">Google Scholar Profile</a>
+                <a href="${professorLinks.linkedin}" target="_blank" rel="noopener">LinkedIn Profile</a>
+              </div>
+            </section>`;
+}
+
 function renderPortfolioReflection(post) {
   return html`
             <section class="article-block" id="portfolio-reflection">
@@ -665,11 +677,12 @@ function renderArticle(post) {
   const toc = post.sections
     .map(([title]) => `<a href="#${sectionId(title)}">${title}</a>`)
     .concat('<a href="#portfolio-reflection">Portfolio Reflection</a>')
+    .concat('<a href="#professor-resources">Professor Resources</a>')
     .join("\n                ");
   const body = post.sections
     .map(([title, paragraphs], index) => {
       const figure =
-        index === 1
+        post.cover && index === 1
           ? html`
               <figure class="article-figure">
                 <img src="${post.cover}" alt="${post.alt}" />
@@ -730,13 +743,13 @@ function renderArticle(post) {
               <span>${post.category}</span>
             </div>
           </div>
-          <div class="article-cover-stack">
+          ${post.cover ? html`<div class="article-cover-stack">
             <img class="article-cover-image" src="${post.cover}" alt="${post.alt}" />
             <div class="article-cover-note">
               <span class="card-kicker">Core Message</span>
               <p>${post.note}</p>
             </div>
-          </div>
+          </div>` : ""}
         </section>
         <section class="article-layout">
           <aside class="article-side" data-reveal>
@@ -754,6 +767,7 @@ function renderArticle(post) {
           <article class="article-content" data-reveal>
 ${body}
 ${renderPortfolioReflection(post)}
+${renderProfessorResources()}
             <section class="article-block closing-card" id="closing-thought">
               <span class="card-kicker">Closing Thought</span>
               <h2>This post is one part of my engineering portfolio journey.</h2>
