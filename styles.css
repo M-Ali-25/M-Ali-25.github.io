@@ -447,6 +447,63 @@ ol {
   color: var(--text);
 }
 
+.future-semester-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1rem;
+  max-width: 42rem;
+}
+
+.future-semester-button {
+  position: relative;
+  flex: 1 1 10.5rem;
+  min-width: 10.5rem;
+}
+
+.future-semester-button summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(143, 197, 211, 0.3);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 800;
+  list-style: none;
+  text-align: center;
+  transition: transform var(--transition), border-color var(--transition),
+    background var(--transition);
+}
+
+.future-semester-button summary::-webkit-details-marker {
+  display: none;
+}
+
+.future-semester-button summary:hover,
+.future-semester-button:focus-within summary,
+.future-semester-button[open] summary {
+  transform: translateY(-2px);
+  border-color: rgba(56, 214, 198, 0.55);
+  background: rgba(56, 214, 198, 0.12);
+  color: var(--primary);
+}
+
+.future-semester-button p {
+  margin-top: 0.55rem;
+  padding: 0.85rem 0.95rem;
+  border: 1px solid rgba(143, 197, 211, 0.24);
+  border-radius: 16px;
+  background: rgba(6, 17, 28, 0.78);
+  color: #c7d8e1;
+  font-size: 0.84rem;
+  line-height: 1.65;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+}
+
 .home-portrait-column {
   display: grid;
   gap: 1rem;
@@ -2108,6 +2165,11 @@ body.js-enhanced [data-reveal].is-visible {
   .quick-links-grid,
   .contact-details {
     grid-template-columns: 1fr;
+  }
+
+  .future-semester-button {
+    flex-basis: 100%;
+    min-width: 0;
   }
 
   .feature-story-body,
